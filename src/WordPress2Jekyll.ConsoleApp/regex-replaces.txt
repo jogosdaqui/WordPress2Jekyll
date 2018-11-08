@@ -2,7 +2,7 @@
 
 \[tribulant_slideshow.+\]
 
-(\[sc:.*Youtube videoid=.(?<id>[a-z0-9]+).+\]|httpv://youtu.be/(?<id>[a-z0-9]+))
+(\[sc:.*Youtube videoid=.(?<id>[a-z0-9_]+).+\]|httpv://youtu.be/(?<id>[a-z0-9]+))
 {% youtube ${id} %}
 
 \[sc.*Quote.+Text=.(?<text>.+). author=.(?<author>.+).\]

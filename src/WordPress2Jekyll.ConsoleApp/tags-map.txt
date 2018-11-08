@@ -45,8 +45,8 @@ florianopolis = santa-catarina
 insert coins = insert-coins youtube
 chroma squad = chroma-squad behold-studios
 behold studios = behold-studios
-youtube = video youtube
-vimeo = video vimeo
+youtube = video
+vimeo = video
 icon games = icon-games
 playmove
 hackajam = evento
@@ -55,3 +55,4 @@ gamejam = evento
 sc:eventinfo = evento
 starry panda = starry-panda
 zanardi & liza = zanardi-and-liza
+mikura = quadro-a-quadro

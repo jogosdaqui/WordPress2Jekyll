@@ -30,7 +30,7 @@ namespace WordPress2Jekyll.ConsoleApp
 $@"---
 published: true
 layout: game
-title: {post.Title}
+title: '{post.Title}'
 tags: {TagMapper.GetTags(post)}
 ---
 {ConvertPostContent(post.Content)}";
@@ -49,6 +49,8 @@ tags: {TagMapper.GetTags(post)}
             var galleryOutputPath = Path.Combine(_imagesOutputRootFolder, post.Date.ToString("yyyy/MM/dd"), post.Name);
             Directory.CreateDirectory(galleryOutputPath);
 
+            var logoFound = false;
+
             foreach (var img in images)
             {
                 var path = img.Path;
@@ -57,11 +59,13 @@ tags: {TagMapper.GetTags(post)}
 
                 // Se o arquivo de imagem tem o mesmo nome do post ou tem logo no nome, 
                 // então faz o arquivo ter o nome 'logo' no destino.
-                if (filenameWithoutExtension.Equals(post.Name, StringComparison.OrdinalIgnoreCase)
+                if (!logoFound &&
+                   (filenameWithoutExtension.Equals(post.Name, StringComparison.OrdinalIgnoreCase)
                    || filenameWithoutExtension.Equals(WordPressReader.NormalizePostName(post.Name), StringComparison.OrdinalIgnoreCase)
                    || filenameWithoutExtension.Contains("logo")
-                   || images.Count() == 1)
+                   || images.Count() == 1))
                 {
+                    logoFound = true;
                     filename = $"logo{Path.GetExtension(path)}";
                 }
 

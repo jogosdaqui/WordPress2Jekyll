@@ -28,12 +28,12 @@ namespace WordPress2Jekyll.ConsoleApp
             return _conn.Query(@"
                 SELECT 
                     ID AS Id, 
-                    REPLACE(post_title, '::', '-') AS Title, 
+                    post_title AS Title, 
                     REPLACE(REPLACE(post_name, 'a%c2%a7a', 'ca'), 'i%c2%ad', 'i') AS Name, 
                     post_date As Date, 
                     post_content AS Content
                 FROM wp_posts 
-                WHERE post_status = 'publish' AND post_title <> '' AND post_name LIKE 'finalistas-do-festival-de-jogos-independentes-do-sbgames-2015'
+                WHERE post_status = 'publish' AND post_title <> '' AND post_name LIKE 'mikura-going-home'
                 ORDER BY post_date 
                 -- limit 10 offset 0");
         }
@@ -85,7 +85,11 @@ namespace WordPress2Jekyll.ConsoleApp
             }
 
 
-            return results.Distinct().OrderBy(r => r.Path);
+            return results
+                .Distinct()
+                .OrderBy(i => !i.Path.Equals(post.Name, StringComparison.OrdinalIgnoreCase))
+                .ThenBy(i => !i.Path.Contains("logo"))
+                .ThenBy(r => r.Path);
         }
 
         public void Dispose()
