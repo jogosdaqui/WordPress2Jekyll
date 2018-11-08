@@ -33,9 +33,9 @@ namespace WordPress2Jekyll.ConsoleApp
                     post_date As Date, 
                     post_content AS Content
                 FROM wp_posts 
-                WHERE post_status = 'publish' AND post_title <> '' -- AND post_name LIKE 'reestruturacao-na-hoplon'
+                WHERE post_status = 'publish' AND post_title <> '' AND post_name LIKE 'finalistas-do-festival-de-jogos-independentes-do-sbgames-2015'
                 ORDER BY post_date 
-                limit 10 offset 0");
+                -- limit 10 offset 0");
         }
 
         public IEnumerable<dynamic> GetPostImages(dynamic post)

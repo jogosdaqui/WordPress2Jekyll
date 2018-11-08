@@ -1,0 +1,33 @@
+﻿<h\d>\[tribulant_slideshow.+\]</h\d>
+
+\[tribulant_slideshow.+\]
+
+(\[sc:.*Youtube videoid=.(?<id>[a-z0-9]+).+\]|httpv://youtu.be/(?<id>[a-z0-9]+))
+{% youtube ${id} %}
+
+\[sc.*Quote.+Text=.(?<text>.+). author=.(?<author>.+).\]
+> ${text} (${author})
+
+\[sc.*Quote.+Text=.(?<text>.+).+\]
+> ${text}
+
+\[sc:.*EventInfo.+name=.(?<name>.+). when=.(?<when>.+). where=.(?<where>.+). who=.(?<who>.+). howmuch=.(?<howmuch>.+). moreinfo=.(?<moreinfo>.+[a-z0-9/]).
+### Dados do evento
+* **Nome**: ${name}
+* **Quando**: ${when}
+* **Onde**: ${where}
+* **Público alvo**: ${who}
+* **Custo**: ${howmuch}
+* **Mais detalhes**: [${moreinfo}](${moreinfo})
+
+\[sc:.*InsertCoins_(header|footer).*\]
+
+\[sc:.*ImagesOfTheWeek_(header|footer).*]
+
+\[sc:ImagesOfTheWeek_VideoItem.+number=.(?<number>.+)..+description=.(?<description>.+)..+video=.(?<video>.+)..+url=.(?<url>.+[a-z0-9/]).*\]
+## #${number}
+[${description}](${url})
+
+\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+description=.(?<description>.+)..+image=.+/uploads/(?<image>.+)..+url=.(?<url>.+[a-z0-9/]).*\]
+## #${number}
+[${description}](${url})

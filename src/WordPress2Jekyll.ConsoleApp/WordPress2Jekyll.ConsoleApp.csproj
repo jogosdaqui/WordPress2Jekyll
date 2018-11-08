@@ -11,9 +11,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="tags-map.txt" />
+    <None Remove="tags-map %28copy%29.txt" />
+    <None Remove="text-substitutions %28copy%29.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="tags-map.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="text-replaces.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="regex-replaces.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

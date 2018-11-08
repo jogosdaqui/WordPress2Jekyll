@@ -53,3 +53,5 @@ hackajam = evento
 hackathon = evento
 gamejam = evento
 sc:eventinfo = evento
+starry panda = starry-panda
+zanardi & liza = zanardi-and-liza
