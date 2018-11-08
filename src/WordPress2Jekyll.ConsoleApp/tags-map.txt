@@ -1,0 +1,55 @@
+﻿tilt
+press release = press-release
+gametrack
+sbgames = sbgames evento
+promoção = promocao
+erinia
+gamecon = gamecon evento
+rpg
+taikodom = taikodom hoplon
+hoplon
+televisão
+show do milhão = show-do-milhao
+sbt
+roko-loko
+no limite = reality-show
+rede globo = globo
+são paulo = sao-paulo
+gpl = open-source
+software livre = open-source
+workshop = evento
+SBIE = sbie evento
+impacto alpha = oniria
+oniria
+othello = continuum
+continuum
+bahia
+cataclism = palmsoft
+adventures of zaak = meantime
+meantime
+massively multiplayer online game = mmog
+abragames
+jogo de ação = acao
+big brother brasil = reality-show
+vudugame = tilt
+devworks = devworks
+lúmen = lumen
+mmorpg = mmorpg
+windows
+linux
+mac
+osx = mac
+porto alegre = rio-grande-do-sul
+curitiba = parana
+florianopolis = santa-catarina
+insert coins = insert-coins youtube
+chroma squad = chroma-squad behold-studios
+behold studios = behold-studios
+youtube = video youtube
+vimeo = video vimeo
+icon games = icon-games
+playmove
+hackajam = evento
+hackathon = evento
+gamejam = evento
+sc:eventinfo = evento
