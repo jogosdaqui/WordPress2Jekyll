@@ -108,6 +108,19 @@ namespace WordPress2Jekyll.ConsoleApp
                 results.Add(new { Path = $"{post.Date:yyyy/MM}/{Path.GetFileName(attachment.guid)}" });
             }
 
+            // Os captions que existem no conteúdo.
+            matches = CaptionsFromPostContentRegex.Matches(normalizedContent);
+
+            foreach (Match m in matches)
+            {
+                var attachment = _conn.QueryFirst(@"
+                SELECT guid
+                FROM wp_posts 
+                WHERE ID = @id", new { id = m.Groups["id"].Value });
+
+                results.Add(new { Path = $"{post.Date:yyyy/MM}/{Path.GetFileName(attachment.guid)}" });
+            }
+
 
             return results
                 .Distinct()
