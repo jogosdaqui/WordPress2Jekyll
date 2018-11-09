@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Dapper;
@@ -10,6 +11,7 @@ namespace WordPress2Jekyll.ConsoleApp
     public sealed class WordPressReader : IDisposable
     {
         public static readonly Regex ImageNamesFromPostContentRegex = new Regex("(<a.+)*<img.+src=\"\\S+/(\\S+)\".+(</a>)*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        public static readonly Regex CaptionsFromPostContentRegex = new Regex(@"\[caption id=.attachment_(?<id>\d+).+\]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public static readonly Regex GalleryIdFromPostContentRegex = new Regex("\\[tribulant_slideshow gallery_id=\"(\\d+)\"", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private readonly MySqlConnection _conn;
@@ -82,13 +84,28 @@ namespace WordPress2Jekyll.ConsoleApp
                 }));
             }
 
+            // Garante que a regex vão obter todas as imagens nos posts que estão salvos inteiramente numa única linha.
+            var normalizedContent = post.Content.Replace("</p>", $"</p>{Environment.NewLine}");
 
             // Do parse do conteúdo do post.
-            var matches = ImageNamesFromPostContentRegex.Matches(post.Content);
+            var matches = ImageNamesFromPostContentRegex.Matches(normalizedContent);
 
             foreach(Match m in matches)
             {
                 results.Add(new { Path = $"{post.Date:yyyy/MM}/{m.Groups[2].Value}" });
+            }
+
+            // Os captions que existem no conteúdo.
+            matches = CaptionsFromPostContentRegex.Matches(normalizedContent);
+
+            foreach (Match m in matches)
+            {
+                var attachment = _conn.QueryFirst(@"
+                SELECT guid
+                FROM wp_posts 
+                WHERE ID = @id", new { id = m.Groups["id"].Value });
+
+                results.Add(new { Path = $"{post.Date:yyyy/MM}/{Path.GetFileName(attachment.guid)}" });
             }
 
 

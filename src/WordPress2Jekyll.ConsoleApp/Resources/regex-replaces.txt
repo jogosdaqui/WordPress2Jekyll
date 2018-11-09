@@ -35,3 +35,16 @@
 \[sc.*Interview_item.+question=.(?<question>.+)..+interviewee=.(?<interviewee>.+)..+answer=.(?<answer>.+)...*\]
 ## ${question}
 > ${interviewee}: ${answer}
+
+\[caption id=.attachment_(?<id>\d+).+\]
+
+\[sc:.*Checkpoint_header.*\]
+
+\[sc:CheckPoint_item.+number=.(?<number>\d+).+description=.(?<description>.+).{2,}url=.(?<url>.+).{2,}\]
+## #${number}
+[${description}](${url})
+
+<strong>(?<text>.+)</strong>
+**${text}**
+
+\[sc:Souking_(header|footer).*\]
