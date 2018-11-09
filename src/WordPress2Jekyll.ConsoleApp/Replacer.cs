@@ -33,7 +33,7 @@ namespace WordPress2Jekyll.ConsoleApp
 
         private static void LoadFile<TKey>(this Dictionary<TKey, string> replaces, string fileName, Func<string, string, (TKey, string)> handleLine)
         {
-            var lines = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName));
+            var lines = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", fileName));
 
             for (int i = 0; i < lines.Length; i++)
             {

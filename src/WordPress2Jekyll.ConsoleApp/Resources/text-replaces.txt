@@ -2,11 +2,13 @@
 
 <div style="text-align: justify;">
 
+<div style="text-align: left;">
+
 </div>
 
 <p style="text-align: justify;">
 
-</p>
+<p>
 
 http://www.jogosdaqui.com.br/index.php?p=r
 https://jogosdaqui.github.io
@@ -31,6 +33,10 @@ https://jogosdaqui.github.io
 
 </table>
 
+<h5></h5>
+
+<h4></h4>
+
 <h5>
 ## 
 
@@ -40,3 +46,6 @@ https://jogosdaqui.github.io
 ### 
 
 </h4>
+
+úniquo
+unico

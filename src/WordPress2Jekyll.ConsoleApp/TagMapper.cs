@@ -11,12 +11,12 @@ namespace WordPress2Jekyll.ConsoleApp
 
         static TagMapper()
         {
-            var lines = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tags-map.txt"));
+            var lines = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "tags-map.txt"));
 
             foreach(var line in lines)
             {
                 var parts = line.Split(" = ");
-                _knowTags.Add(parts[0], parts.Length > 1 ? parts[1] : parts[0]);
+                _knowTags.Add(parts[0], parts.Length > 1 ? parts[1] : parts[0].Replace(' ', '-'));
             }
         }
 

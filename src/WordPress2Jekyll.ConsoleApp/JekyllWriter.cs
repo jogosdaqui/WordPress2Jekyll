@@ -17,10 +17,12 @@ namespace WordPress2Jekyll.ConsoleApp
         private static readonly Regex _eventTagRegex = new Regex(@"\[sc:.*EventInfo.+name=.(?<name>.+). when=.(?<when>.+). where=.(?<where>.+). who=.(?<who>.+). howmuch=.(?<howmuch>.+). moreinfo=.(?<moreinfo>.+)"".*\]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         private readonly WordPressReader _reader;
+        private readonly bool _writeSourceContent;
 
-        public JekyllWriter(WordPressReader reader)
+        public JekyllWriter(WordPressReader reader, bool writeSourceContent = false)
         {
             _reader = reader;
+            _writeSourceContent = writeSourceContent;
             Directory.CreateDirectory(_postsOutputRootFolder);
         }
 
@@ -38,7 +40,9 @@ tags: {TagMapper.GetTags(post)}
             var fileName = Path.Combine(_postsOutputRootFolder, $"{post.Date:yyyy-MM-dd}-{post.Name}.md");
 
             File.WriteAllText(fileName, fileContent);
-            File.WriteAllText($"{fileName}.source.txt", post.Content);
+
+            if (_writeSourceContent)
+                File.WriteAllText($"{fileName}.source.txt", post.Content);
 
             WritePostImages(post);
         }
@@ -81,6 +85,9 @@ tags: {TagMapper.GetTags(post)}
 
         private string ConvertPostContent(string content)
         {
+            // Garante que posts que estão em apenas uma linha sejam corretamente interpretados
+            // pelos replaces abaixo.
+            content = content.Replace("</p>", Environment.NewLine);
             content = WordPressReader.ImageNamesFromPostContentRegex.Replace(content, String.Empty);
 
             return Replacer.Replace(content);

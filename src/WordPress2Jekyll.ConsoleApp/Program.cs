@@ -7,10 +7,12 @@ namespace WordPress2Jekyll.ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando a conversão...");
+            string postName = "entrevista-fernando-paulo-criador-de-treeker";
+            bool writeSourceContent = true;
 
-            using (var reader = new WordPressReader())
+            using (var reader = new WordPressReader(postName))
             {
-                var writer = new JekyllWriter(reader);
+                var writer = new JekyllWriter(reader, writeSourceContent);
 
                 foreach (var p in reader.GetPosts())
                 {

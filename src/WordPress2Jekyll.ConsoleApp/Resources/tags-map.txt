@@ -1,0 +1,97 @@
+﻿ ios  = ios
+abragames
+adventures of zaak = meantime
+android
+app store = ios
+aquiris
+bahia
+behold studios
+big brother brasil = reality-show
+bluesoft = bluesoft-studios
+cataclism = palmsoft
+chroma squad = chroma-squad behold-studios
+continuum
+curitiba = parana
+dash games = dash-games
+devworks = devworks
+diefox
+domino box
+donsoft entertainment
+erinia
+escape from hell = escape-from-hell
+espaço informática = espaco-informatica
+fingertips
+florianopolis = santa-catarina
+gamecon = gamecon evento
+gamejam = evento
+gametrack
+google play = android
+gpl = open-source
+graffiti entertainment
+green land studios
+hackajam = evento
+hackathon = evento
+hoplon
+htr = graffiti-entertainment
+icon games = icon-games
+impacto alpha = oniria
+insert coins = insert-coins
+insolita studios 
+invent4
+jogo de ação = acao
+jules: unboxing the world = sulistas
+jynx playware
+kidguru studios
+koko arena = nology
+linux
+livetouch
+lúmen = lumen
+ mac = mac
+massively multiplayer online game = mmog
+meantime
+mikura
+miniboss
+mmorpg = mmorpg
+mother gaia studio
+musigames
+no limite = reality-show
+nology
+odin game studio
+oniria
+osx = mac
+othello = continuum
+ovni studios
+perceptum
+pixtoy = pixtoy
+playmove
+porto alegre = rio-grande-do-sul
+press release = press-release
+promoção = promocao
+rede globo = globo
+roko-loko
+rpg
+sbgames = sbgames evento
+sbie = sbie evento
+sbt
+sc:eventinfo = evento
+show do milhão = show-do-milhao
+software livre = open-source
+southlogic studios
+splitplay = splitplay
+starry panda = starry-panda
+steam
+são paulo = sao-paulo
+taikodom = taikodom hoplon
+tec toy
+televisão
+the velopers
+tilt
+vampiromania = green-land-studios
+vimeo = video
+vudugame = tilt
+webcore
+windows
+workshop = evento
+yellow jam
+youtube = video
+zanardi & liza = zanardi-and-liza

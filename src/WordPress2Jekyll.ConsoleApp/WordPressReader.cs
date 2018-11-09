@@ -9,12 +9,15 @@ namespace WordPress2Jekyll.ConsoleApp
 {
     public sealed class WordPressReader : IDisposable
     {
-        private readonly MySqlConnection _conn;
         public static readonly Regex ImageNamesFromPostContentRegex = new Regex("(<a.+)*<img.+src=\"\\S+/(\\S+)\".+(</a>)*", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public static readonly Regex GalleryIdFromPostContentRegex = new Regex("\\[tribulant_slideshow gallery_id=\"(\\d+)\"", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-       
-        public WordPressReader()
+
+        private readonly MySqlConnection _conn;
+        private readonly string _postName;
+
+        public WordPressReader(string postName = null)
         {
+            _postName = postName;
             _conn = new MySqlConnection("Server=127.0.0.1;Database=jogosdaqui;Uid=root;Pwd=adm123!@#");
         }
 
@@ -33,9 +36,13 @@ namespace WordPress2Jekyll.ConsoleApp
                     post_date As Date, 
                     post_content AS Content
                 FROM wp_posts 
-                WHERE post_status = 'publish' AND post_title <> '' AND post_name LIKE 'mikura-going-home'
+                WHERE 
+                    post_status = 'publish' 
+                    AND post_title <> '' 
+                    AND post_type = 'post'
+                    AND (@postName IS NULL OR post_name = @postName)
                 ORDER BY post_date 
-                -- limit 10 offset 0");
+                -- limit 10 offset 0", new { postName = _postName });
         }
 
         public IEnumerable<dynamic> GetPostImages(dynamic post)

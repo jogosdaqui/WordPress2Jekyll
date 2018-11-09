@@ -10,19 +10,27 @@
     <PackageReference Include="MySqlConnector" Version="0.47.1" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="tags-map.txt" />
     <None Remove="tags-map %28copy%29.txt" />
     <None Remove="text-substitutions %28copy%29.txt" />
+    <None Remove="Resources\regex-replaces.txt" />
+    <None Remove="Resources\tags-map.txt" />
+    <None Remove="Resources\text-replaces.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="tags-map.txt">
+    <Content Include="Resources\regex-replaces.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="text-replaces.txt">
+    <Content Include="Resources\tags-map.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="regex-replaces.txt">
+    <Content Include="Resources\text-replaces.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Resources.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 </Project>
