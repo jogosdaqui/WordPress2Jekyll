@@ -32,7 +32,7 @@ namespace WordPress2Jekyll.ConsoleApp
 $@"---
 published: true
 layout: game
-title: '{post.Title}'
+title: '{ConvertPostTitle(post.Title)}'
 tags: {TagMapper.GetTags(post)}
 ---
 {ConvertPostContent(post.Content)}";
@@ -82,6 +82,14 @@ tags: {TagMapper.GetTags(post)}
 
 
         }
+
+        private string ConvertPostTitle(string title)
+        {
+            return title
+                .Replace("'", "&#39;")
+                .Replace("Apoie o jogo brasileiro Cowboy vs Aliens vs Ninjas", "Apoie o jogo brasileiro Comboy vs Aliens vs Ninjas"); // Tem um char especial no nome original q não consegui identificar.
+        }
+
 
         private string ConvertPostContent(string content)
         {

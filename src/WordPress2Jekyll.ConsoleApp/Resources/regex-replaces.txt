@@ -2,8 +2,11 @@
 
 \[tribulant_slideshow.+\]
 
-(\[sc:.*Youtube videoid=.(?<id>[a-z0-9_]+).+\]|httpv://youtu.be/(?<id>[a-z0-9_]+)|<object.+http://www.youtube.com/v/(?<id>[a-z0-9_]+).+</object>)
+(\[sc:.*Youtube videoid=.(?<id>[a-z0-9_-]+).+\]|httpv://youtu.be/(?<id>[a-z0-9_-]+)|<object.+http://www.youtube.com/v/(?<id>[a-z0-9_-]+).+</object>)
 {% youtube ${id} %}
+
+\[sc:Vimeo videoid=.(?<id>\d+).{2,}\]
+{% vimeo ${id} %}
 
 \[sc.*Quote.+Text=.(?<text>.+). author=.(?<author>.+).\]
 > ${text} (${author})
@@ -11,7 +14,7 @@
 \[sc.*Quote.+Text=.(?<text>.+).+\]
 > ${text}
 
-\[sc:.*EventInfo.+name=.(?<name>.+). when=.(?<when>.+). where=.(?<where>.+). who=.(?<who>.+). howmuch=.(?<howmuch>.+). moreinfo=.(?<moreinfo>.+[a-z0-9/]).
+\[sc:.*EventInfo.+name=.(?<name>.+). when=.(?<when>.+). where=.(?<where>.+). who=.(?<who>.+). howmuch=.(?<howmuch>.+). moreinfo=.(?<moreinfo>.+[a-z0-9/]).+
 ### Dados do evento
 * **Nome**: ${name}
 * **Quando**: ${when}
@@ -28,10 +31,46 @@
 ## #${number}
 [${description}](${url})
 
-\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+description=.(?<description>.+)..+image=.+/uploads/(?<image>.+)..+url=.(?<url>.+[a-z0-9/]).*\]
+\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+description=.(?<description>.+)..+image=.+/uploads/(?<image>.+).{2,}url=.(?<url>.+[a-z0-9/]).{2,}\]
+## #${number}
+[${description}](${url})
+
+\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+description=.(?<description>.+).{2,}url=.(?<url>.+[a-z0-9/])..+image=.+/uploads/(?<image>.+).{2,}\]
+## #${number}
+[${description}](${url})
+
+\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+image=.+/uploads/(?<image>.+)..+description=.(?<description>.+).{2,}url=.(?<url>.+[a-z0-9/]).{2,}\]
+## #${number}
+[${description}](${url})
+
+\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+description=.(?<description>.+).{2,}url=.(?<url>.+[a-z0-9/])..+image=.+/uploads/(?<image>.+).{2,}\]
+## #${number}
+[${description}](${url})
+
+\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+description=.(?<description>.+).{2,}url=.(?<url>.+[a-z0-9/]).{2,}\]
 ## #${number}
 [${description}](${url})
 
 \[sc.*Interview_item.+question=.(?<question>.+)..+interviewee=.(?<interviewee>.+)..+answer=.(?<answer>.+)...*\]
 ## ${question}
 > ${interviewee}: ${answer}
+
+\[sc.*Interview_item.+interviewee=.(?<interviewee>.+).{2,}question=.(?<question>.+).{2,}answer=.(?<answer>.+).{2,}\]
+## ${question}
+> ${interviewee}: ${answer}
+
+\[caption id=.attachment_(?<id>\d+).+\]
+
+\[sc:.*Checkpoint_header.*\]
+
+\[sc:CheckPoint_item.+number=.(?<number>\d+).+description=.(?<description>.+).{2,}url=.(?<url>.+).{2,}\]
+## #${number}
+[${description}](${url})
+
+<strong>(?<text>[a-z0-9\s]+)</strong>
+**${text}**
+
+\[sc:Souking_(header|footer).*\]
+
+\[sc:TweetThis.+Text="(?<text>.+)"
+{% tweetthis ${text} %}

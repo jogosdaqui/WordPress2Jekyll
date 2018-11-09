@@ -3,7 +3,7 @@ abragames
 adventures of zaak = meantime
 android
 app store = ios
-aquiris
+aquiris = aquiris-game-studio   
 bahia
 behold studios
 big brother brasil = reality-show
@@ -54,7 +54,6 @@ miniboss
 mmorpg = mmorpg
 mother gaia studio
 musigames
-no limite = reality-show
 nology
 odin game studio
 oniria
@@ -95,3 +94,67 @@ workshop = evento
 yellow jam
 youtube = video
 zanardi & liza = zanardi-and-liza
+smart panda = leandro-correia
+jet boarder = leandro-correia
+skooter = leandro-correia
+dead mushroom
+zeeppo
+brazil gets unreal = evento
+adjogos-rs
+ludum dare
+souking
+edição da power up = evento
+mopix
+overlord game studio = overlord
+qubyte = qubyte-interactive
+double dash
+ilusis interactive
+greenlight = steam greenlight
+crowdfunding
+kickstarter = crowdfunding
+financiamento coletivo = crowdfunding
+ps4
+xbox one
+rogue snail
+joymasher
+cyber rhino studios
+reiza studios
+axis game day = axis-game-day evento
+beltri studio
+kimeric labs
+swordtales
+unnamed fiasco team
+game academy
+ninja garage studio
+supernova indie games
+big festival
+big starter
+shoot ‘em up - shoot-em-up
+ouya
+bad minions
+seminário de games = evento
+southbox = southbox-game-studio
+minas games festival
+gamepad – seminário = gamepad
+iduna game studio
+mgaia studio
+garage 227
+duak entertainment
+contra labs
+gamepólitan = gamepolitan
+thinkbox games
+big green pillow
+gametek
+little leds
+crazy mind studios
+protomini multimedia
+kongregate
+blusoft studios
+bombservice
+long hat house
+rockhead games
+demo reel
+labindie
+vortex game studios
+division five
+humble store

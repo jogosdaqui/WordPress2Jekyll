@@ -6,18 +6,22 @@
 
 </div>
 
+<p style="text-align: center;">
+
 <p style="text-align: justify;">
 
 <p>
 
+<p<
+
 http://www.jogosdaqui.com.br/index.php?p=r
-https://jogosdaqui.github.io
+{{ site.baseurl }}
 
 http://www.jogosdaqui.com.br
-https://jogosdaqui.github.io
+{{ site.baseurl }}
 
 http://jogosdaqui.com.br
-https://jogosdaqui.github.io
+{{ site.baseurl }}
 
 <table border="0" cellspacing="0" cellpadding="0">
 
@@ -37,6 +41,9 @@ https://jogosdaqui.github.io
 
 <h4></h4>
 
+<h5><a
+<a
+
 <h5>
 ## 
 
@@ -49,3 +56,6 @@ https://jogosdaqui.github.io
 
 úniquo
 unico
+
+&nbsp;
+ 

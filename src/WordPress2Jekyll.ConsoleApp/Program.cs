@@ -7,8 +7,9 @@ namespace WordPress2Jekyll.ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando a conversão...");
-            string postName = "entrevista-fernando-paulo-criador-de-treeker";
-            bool writeSourceContent = true;
+            string postName = "";
+            bool writeSourceContent = false;
+            int postCount = 0;
 
             using (var reader = new WordPressReader(postName))
             {
@@ -16,7 +17,8 @@ namespace WordPress2Jekyll.ConsoleApp
 
                 foreach (var p in reader.GetPosts())
                 {
-                    Console.WriteLine(p.Title);
+                    postCount++;
+                    Console.WriteLine($"#{postCount} {p.Title}");
                     writer.WritePost(p);
                 }
             }
