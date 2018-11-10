@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace WordPress2Jekyll.ConsoleApp
 {
@@ -27,7 +28,7 @@ namespace WordPress2Jekyll.ConsoleApp
 
             foreach (var kt in _knowTags)
             {
-                if (content.Contains(kt.Key))
+                if (Regex.IsMatch(content, $"[^a-z0-9]{Regex.Escape(kt.Key)}[^a-z0-9]", RegexOptions.IgnoreCase))
                     tags.AddRange(kt.Value.Split(' '));
             }
 

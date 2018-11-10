@@ -2,17 +2,20 @@
 
 \[tribulant_slideshow.+\]
 
-(\[sc:.*Youtube videoid=.(?<id>[a-z0-9_-]+).+\]|httpv://youtu.be/(?<id>[a-z0-9_-]+)|<object.+http://www.youtube.com/v/(?<id>[a-z0-9_-]+).+</object>)
+(\[sc:.*Youtube videoid=.(?<id>[a-z0-9_-]+).+\]|httpv://youtu.be/(?<id>[a-z0-9_-]+)|<object.+http://www.youtube.com/v/(?<id>[a-z0-9_-]+).+</object>|<a href="https://www.youtube.com/watch\?v=(?<id>[a-z0-9_-]+)">https://www.youtube.com/watch\?v=[a-z0-9_-]+</a>)
 {% youtube ${id} %}
 
-\[sc:Vimeo videoid=.(?<id>\d+).{2,}\]
+(\[sc:Vimeo videoid=.(?<id>\d+).{2,}\]|<object .+vimeo.+clip_id=(?<id>\d+).+</object>)
 {% vimeo ${id} %}
 
 \[sc.*Quote.+Text=.(?<text>.+). author=.(?<author>.+).\]
 > ${text} (${author})
 
-\[sc.*Quote.+Text=.(?<text>.+).+\]
+(\[sc.*Quote.+Text=.(?<text>.+).+\]|<em>(<font size=.\d+.>)*(\&quot;)*(?<text>.+)(</font>)*</em>)
 > ${text}
+
+<em>(“|")
+> 
 
 \[sc:.*EventInfo.+name=.(?<name>.+). when=.(?<when>.+). where=.(?<where>.+). who=.(?<who>.+). howmuch=.(?<howmuch>.+). moreinfo=.(?<moreinfo>.+[a-z0-9/]).+
 ### Dados do evento
@@ -22,6 +25,9 @@
 * **Público alvo**: ${who}
 * **Custo**: ${howmuch}
 * **Mais detalhes**: [${moreinfo}](${moreinfo})
+
+(<strong>)*(?<kind>O Que|Quando|Onde|Quem|Por que|Quanto|Inscrições pelo site|Inscri&#231;&#245;es pelo site|Mais informações):(</strong>)*(?<value>.+)
+* **${kind}**: ${value}
 
 \[sc:.*InsertCoins_(header|footer).*\]
 
@@ -77,5 +83,5 @@
 
 \[sc:.*Labindie_(header|footer).*\]
 
-\[sc:.*Interview_header.+text.(?<text>.+).{2,}\]
+\[sc:.*Interview_header.text=.(?<text>.+).{2,}\]
 #### ${text}

@@ -1,4 +1,4 @@
-﻿ ios  = ios
+﻿ios = ios
 iphone = ios
 ipad = ios
 ipod = ios 
@@ -48,7 +48,7 @@ koko arena = nology
 linux
 livetouch
 lúmen = lumen
- mac = mac
+mac = mac
 massively multiplayer online game = mmog
 meantime
 mikura
@@ -177,9 +177,9 @@ awoker games
 recife = pernambuco
 roguelike
 evento powerup = powerup evento
- demo 
+demo
 cat nigiri
- rts 
+rts
 taw studio
 tawstudio = taw-studio
 tinfoil hat studios
@@ -190,7 +190,7 @@ unique criativa
 tlön studios = tlon-studios
 manifesto games
 facebook
-spjam = spjame evento
+spjam = spjam evento
 incubo
 flux game studio
 point-and-click
@@ -231,3 +231,9 @@ e-games
 ubisoft
 documentario = documentario video
 o² games = o2-games
+preloud = preloud-studios
+playlore
+arc-gen
+checkpoint
+imagens da semana
+legends online = informe-publicitario

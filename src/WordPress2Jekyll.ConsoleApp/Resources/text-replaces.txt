@@ -1,5 +1,7 @@
 ﻿<div style="text-align: center;">
 
+<div style="text-align:center">
+
 <div style="text-align: justify;">
 
 <div style="text-align: left;">
@@ -24,7 +26,7 @@ http://jogosdaqui.com.br
 {{ site.baseurl }}
 
 jogosdaqui@uol.com.br
-giacomelli@gmail.com
+giacomelli+jogosdaqui@gmail.com
 
 <table border="0" cellspacing="0" cellpadding="0">
 
@@ -62,5 +64,10 @@ unico
 
 &nbsp;
  
+
 Ninentedo
-Nintendo 
+Nintendo
+
+<em>
+
+</em>

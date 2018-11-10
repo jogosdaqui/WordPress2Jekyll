@@ -8,7 +8,7 @@ namespace WordPress2Jekyll.ConsoleApp
         {
             Console.WriteLine("Iniciando a conversão...");
             string postName = null;
-            bool writeSourceContent = false;
+            bool writeSourceContent = !String.IsNullOrEmpty(postName);
             int postCount = 0;
 
             using (var reader = new WordPressReader(postName))
