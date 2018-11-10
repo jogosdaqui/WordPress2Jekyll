@@ -1,4 +1,7 @@
 ﻿ ios  = ios
+iphone = ios
+ipad = ios
+ipod = ios 
 abragames
 adventures of zaak = meantime
 android
@@ -8,6 +11,7 @@ bahia
 behold studios
 big brother brasil = reality-show
 bluesoft = bluesoft-studios
+palmsoft
 cataclism = palmsoft
 chroma squad = chroma-squad behold-studios
 continuum
@@ -18,7 +22,6 @@ diefox
 domino box
 donsoft entertainment
 erinia
-escape from hell = escape-from-hell
 espaço informática = espaco-informatica
 fingertips
 florianopolis = santa-catarina
@@ -32,7 +35,6 @@ green land studios
 hackajam = evento
 hackathon = evento
 hoplon
-htr = graffiti-entertainment
 icon games = icon-games
 impacto alpha = oniria
 insert coins = insert-coins
@@ -60,6 +62,7 @@ oniria
 osx = mac
 othello = continuum
 ovni studios
+ovnistudios = ovni-studios
 perceptum
 pixtoy = pixtoy
 playmove
@@ -80,7 +83,7 @@ splitplay = splitplay
 starry panda = starry-panda
 steam
 são paulo = sao-paulo
-taikodom = taikodom hoplon
+taikodom = hoplon
 tec toy
 televisão
 the velopers
@@ -89,6 +92,7 @@ vampiromania = green-land-studios
 vimeo = video
 vudugame = tilt
 webcore
+windows phone
 windows
 workshop = evento
 yellow jam
@@ -99,8 +103,8 @@ jet boarder = leandro-correia
 skooter = leandro-correia
 dead mushroom
 zeeppo
-brazil gets unreal = evento
-adjogos-rs
+brazil gets unreal = brazil-gets-unreal evento
+adjogosrs
 ludum dare
 souking
 edição da power up = evento
@@ -113,8 +117,18 @@ greenlight = steam greenlight
 crowdfunding
 kickstarter = crowdfunding
 financiamento coletivo = crowdfunding
+psone
+ps2
+ps3
 ps4
+psp
+ps vita = psvita
+psvita = psvita
 xbox one
+xbox 360
+xbox
+wii u
+wii
 rogue snail
 joymasher
 cyber rhino studios
@@ -127,8 +141,8 @@ unnamed fiasco team
 game academy
 ninja garage studio
 supernova indie games
-big festival
-big starter
+big festival = big-festival evento
+big starter = big-starter evento
 shoot ‘em up - shoot-em-up
 ouya
 bad minions
@@ -146,7 +160,7 @@ thinkbox games
 big green pillow
 gametek
 little leds
-crazy mind studios
+crazy mind = crazy-minds-game-studios
 protomini multimedia
 kongregate
 blusoft studios
@@ -158,3 +172,62 @@ labindie
 vortex game studios
 division five
 humble store
+cupcake sweet entertainment
+awoker games
+recife = pernambuco
+roguelike
+evento powerup = powerup evento
+ demo 
+cat nigiri
+ rts 
+taw studio
+tawstudio = taw-studio
+tinfoil hat studios
+mostra brasiliense de indie games = bring evento
+otus game studio
+prosperity games
+unique criativa
+tlön studios = tlon-studios
+manifesto games
+facebook
+spjam = spjame evento
+incubo
+flux game studio
+point-and-click
+odi entertainment
+sliding lemon story
+frozen logic studios
+tendrils entertainment
+c2flag
+doubleleft
+nano studio
+alpaca team
+blackberry
+cube factory
+pankeka games
+keeplay
+studio ho
+devoid games
+skahal = skahal-studios
+studio avante
+bgs = bgs evento
+bivissoft
+rayst games
+white vortex
+yotta apps
+desura
+maya games
+riachuelo games
+gamecraft = gamecraft evento
+currant cat
+dynamic light
+entrevista
+prévia = preview
+preview = preview
+global game jam = global-game-jam evento
+cats in the sky
+zeebo
+e-games
+ubisoft
+documentario = documentario video
+o² games = o2-games

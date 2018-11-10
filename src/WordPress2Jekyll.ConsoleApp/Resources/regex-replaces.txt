@@ -31,7 +31,7 @@
 ## #${number}
 [${description}](${url})
 
-\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+description=.(?<description>.+)..+image=.+/uploads/(?<image>.+).{2,}url=.(?<url>.+[a-z0-9/]).{2,}\]
+\[sc:ImagesOfTheWeek_item.+number=.(?<number>.+)..+description=.(?<description>.+).{2,}image=.+/uploads/(?<image>.+).{2,}url=.(?<url>.+[a-z0-9/]).{2,}\]
 ## #${number}
 [${description}](${url})
 
@@ -74,3 +74,8 @@
 
 \[sc:TweetThis.+Text="(?<text>.+)"
 {% tweetthis ${text} %}
+
+\[sc:.*Labindie_(header|footer).*\]
+
+\[sc:.*Interview_header.+text.(?<text>.+).{2,}\]
+#### ${text}

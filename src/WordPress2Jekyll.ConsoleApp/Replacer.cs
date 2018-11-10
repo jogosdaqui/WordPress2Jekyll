@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace WordPress2Jekyll.ConsoleApp
@@ -33,7 +34,7 @@ namespace WordPress2Jekyll.ConsoleApp
 
         private static void LoadFile<TKey>(this Dictionary<TKey, string> replaces, string fileName, Func<string, string, (TKey, string)> handleLine)
         {
-            var lines = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", fileName));
+            var lines = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", fileName), Encoding.UTF8);
 
             for (int i = 0; i < lines.Length; i++)
             {

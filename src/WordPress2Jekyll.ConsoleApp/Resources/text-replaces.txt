@@ -23,6 +23,9 @@ http://www.jogosdaqui.com.br
 http://jogosdaqui.com.br
 {{ site.baseurl }}
 
+jogosdaqui@uol.com.br
+giacomelli@gmail.com
+
 <table border="0" cellspacing="0" cellpadding="0">
 
 <tbody>
@@ -59,3 +62,5 @@ unico
 
 &nbsp;
  
+Ninentedo
+Nintendo 
