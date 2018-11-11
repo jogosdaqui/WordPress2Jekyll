@@ -7,7 +7,7 @@ namespace WordPress2Jekyll.ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando a conversão...");
-            string postName = null;
+            string postName = "mago-das-ervas";
             bool writeSourceContent = !String.IsNullOrEmpty(postName);
             int postCount = 0;
 

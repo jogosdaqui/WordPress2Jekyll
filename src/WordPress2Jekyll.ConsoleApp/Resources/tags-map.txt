@@ -11,18 +11,21 @@ bahia
 behold studios
 big brother brasil = reality-show
 bluesoft = bluesoft-studios
-palmsoft
+palmsoft = palmsoft mobile
 cataclism = palmsoft
 chroma squad = chroma-squad behold-studios
 continuum
+outlive = continuum rts
 curitiba = parana
 dash games = dash-games
-devworks = devworks
+devworks = devworks-game-technology
 diefox
 domino box
 donsoft entertainment
 erinia
 espaço informática = espaco-informatica
+christmas magic = espaco-informatica
+hades = espaco-informatica
 fingertips
 florianopolis = santa-catarina
 gamecon = gamecon evento
@@ -32,10 +35,15 @@ google play = android
 gpl = open-source
 graffiti entertainment
 green land studios
+green land studio = green-land-studios
+vbike = green-land-studios
+v.t.o.l. = green-land-studios
+botzin = green-land-studios
 hackajam = evento
 hackathon = evento
 hoplon
 icon games = icon-games
+penguin racer = icon-games corrida
 impacto alpha = oniria
 insert coins = insert-coins
 insolita studios 
@@ -47,7 +55,9 @@ kidguru studios
 koko arena = nology
 linux
 livetouch
-lúmen = lumen
+lúmen = lumen-technology
+sudoky = lumen-technology
+cubi = lumen-technology
 mac = mac
 massively multiplayer online game = mmog
 meantime
@@ -230,10 +240,44 @@ zeebo
 e-games
 ubisoft
 documentario = documentario video
-o² games = o2-games
+o2 games = o2-games
+gamegol = o2-games
 preloud = preloud-studios
 playlore
 arc-gen
 checkpoint
 imagens da semana
 legends online = informe-publicitario
+délirus entertainment = delirus-entertainment
+gênero “puzzle” = puzzle
+quebra-cabeça = puzzle
+jogo de puzzle = puzzle
+dynamic games
+vôlei de praia = esporte
+dominó clássico = tabuleiro
+jogosbr
+concurso
+no celular = mobile
+jetski race = esporte
+cgmax
+redetv
+driação digital = criacao-digital
+top game show
+moscão killer = tilt
+bola de gude = icon-games
+der pferderennstall = espaco-informatica
+die pferdebande = oniria-entertainment
+die ponyrancher = preloud
+ein zirkuspferd = bitcrafters
+real one arcade
+chip$ = nology
+caipirinha-games
+ottomax = ttomax
+elfland studios
+super mini racing = corrida
+jogo de tênis = esporte
+cuana toon = calibre
+buggy racers = corrida
+horizon chase = corrida
+incidente em varginha = FPS
+mensalão, o jogo = tilt

@@ -95,10 +95,7 @@ tags: {TagMapper.GetTags(post)}
         {
             // Garante que posts que estão em apenas uma linha sejam corretamente interpretados
             // pelos replaces abaixo.
-            content = content
-                .Replace("</p>", Environment.NewLine)
-                .Replace("</div>", Environment.NewLine);
-
+            content = WordPressReader.PreparePostContentForImagesSearch(content);
             content = WordPressReader.ImageNamesFromPostContentRegex.Replace(content, String.Empty);
 
             return Replacer.Replace(content);

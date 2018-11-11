@@ -28,6 +28,14 @@ namespace WordPress2Jekyll.ConsoleApp
             return postName.ToLowerInvariant().Replace("-", "");
         }
 
+        public static string PreparePostContentForImagesSearch(string postContent)
+        {
+            return postContent
+                .Replace("</p>", $"</p>{Environment.NewLine}")
+                .Replace("</a>", $"</a>{Environment.NewLine}")
+                .Replace("</div>", $"</div>{Environment.NewLine}");
+        }
+
         public IEnumerable<dynamic> GetPosts()
         {
             return _conn.Query(@"
@@ -85,7 +93,7 @@ namespace WordPress2Jekyll.ConsoleApp
             }
 
             // Garante que a regex vão obter todas as imagens nos posts que estão salvos inteiramente numa única linha.
-            var normalizedContent = post.Content.Replace("</p>", $"</p>{Environment.NewLine}");
+            var normalizedContent = PreparePostContentForImagesSearch(post.Content);
 
             // Do parse do conteúdo do post.
             var matches = ImageNamesFromPostContentRegex.Matches(normalizedContent);

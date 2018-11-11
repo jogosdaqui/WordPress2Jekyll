@@ -16,6 +16,8 @@
 
 <p<
 
+</p>
+
 http://www.jogosdaqui.com.br/index.php?p=r
 {{ site.baseurl }}
 
@@ -26,6 +28,9 @@ http://jogosdaqui.com.br
 {{ site.baseurl }}
 
 jogosdaqui@uol.com.br
+giacomelli+jogosdaqui@gmail.com
+
+contato@jogosdaqui.com.br
 giacomelli+jogosdaqui@gmail.com
 
 <table border="0" cellspacing="0" cellpadding="0">
@@ -71,3 +76,6 @@ Nintendo
 <em>
 
 </em>
+
+Aprodutora
+A produtora
