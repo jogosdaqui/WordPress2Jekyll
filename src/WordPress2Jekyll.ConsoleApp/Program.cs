@@ -10,6 +10,7 @@ namespace WordPress2Jekyll.ConsoleApp
             string postName = null;
             int maxPosts = int.MaxValue;
             bool writeSourceContent = !String.IsNullOrEmpty(postName);
+           
             int postCount = 0;
 
             using (var reader = new WordPressReader(postName, maxPosts))

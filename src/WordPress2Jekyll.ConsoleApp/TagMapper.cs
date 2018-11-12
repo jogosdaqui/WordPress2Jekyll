@@ -33,7 +33,7 @@ namespace WordPress2Jekyll.ConsoleApp
             }
 
             if (!String.IsNullOrEmpty(post.Developer))
-                tags.Add(post.Developer.ToLowerInvariant());
+                tags.Add(StringHelper.Slugify(post.Developer));
 
             return String.Join(" ", tags.Distinct());
         }

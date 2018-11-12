@@ -87,10 +87,12 @@ namespace WordPress2Jekyll.ConsoleApp
                 limit @maxPosts offset 0", new { postName = _postName, maxPosts = remainingMaxPosts }));
             }
 
-            foreach(var p in posts)
+            posts = posts.Take(_maxPosts).ToList();
+
+            foreach (var p in posts)
             {
                 if (String.IsNullOrEmpty(p.Name))
-                    p.Name = StringHelper.UrlFriendly(p.Title);
+                    p.Name = StringHelper.Slugify(p.Title);
 
                  p.Type = PostHelper.GetPostType(p);
             }

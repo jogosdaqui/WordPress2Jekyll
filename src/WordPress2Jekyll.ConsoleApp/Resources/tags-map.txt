@@ -11,8 +11,8 @@ bahia
 behold studios
 big brother brasil = reality-show
 bluesoft = bluesoft-studios
-palmsoft = palmsoft mobile
-cataclism = palmsoft
+palmsoft = palmsoft-tecnologia mobile
+cataclism = palmsoft-tecnologia
 chroma squad = chroma-squad behold-studios
 continuum
 outlive = continuum rts
@@ -61,7 +61,6 @@ cubi = lumen-technology
 mac = mac
 massively multiplayer online game = mmog
 meantime
-mikura
 miniboss
 mmorpg = mmorpg
 mother gaia studio
@@ -119,7 +118,7 @@ ludum dare
 souking
 edição da power up = evento
 mopix
-overlord game studio = overlord
+overlord game studio
 qubyte = qubyte-interactive
 double dash
 ilusis interactive
@@ -287,3 +286,5 @@ ludusware
 decadium studios
 imax games
 wd studio
+quadro a quadro
+miris mind

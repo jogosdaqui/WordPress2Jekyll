@@ -9,7 +9,7 @@ namespace WordPress2Jekyll.ConsoleApp
         /// <summary>
         /// https://stackoverflow.com/a/25486/956886
         /// </summary>
-        public static string UrlFriendly(string title)
+        public static string Slugify(this string title)
         {
             if (title == null) return "";
 
