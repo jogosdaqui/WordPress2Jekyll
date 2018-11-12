@@ -13,6 +13,10 @@ namespace WordPress2Jekyll.ConsoleApp
         public static readonly Regex ImageNamesFromPostContentRegex = new Regex("((<a.+)*<img.+src=\"\\S+/(?<image>\\S+)\".+(</a>)*|image=\"\\S+/(?<image>\\S+)\")", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public static readonly Regex CaptionsFromPostContentRegex = new Regex(@"\[caption id=.attachment_(?<id>\d+).+\]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public static readonly Regex GalleryIdFromPostContentRegex = new Regex("\\[tribulant_slideshow gallery_id=\"(\\d+)\"", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        public static readonly Regex SlideShowIdFromPostContentRegex = new Regex(@"#SLIDESHOW#(?<id>\d+)#/SLIDESHOW#", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        public static readonly string PhpSiteImagesFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../..", "setup/images/php-site/image");
+        public static readonly string PhpSiteSlidesShowFolder = Path.Combine(PhpSiteImagesFolder, "slidesshow");
+        public static readonly string PhpSiteLogosFolder = Path.Combine(PhpSiteImagesFolder, "logos");
 
         private readonly MySqlConnection _conn;
         private readonly string _postName;
@@ -25,11 +29,6 @@ namespace WordPress2Jekyll.ConsoleApp
             _conn = new MySqlConnection("Server=127.0.0.1;Database=jogosdaqui;Uid=root;Pwd=adm123!@#");
         }
 
-        public static string NormalizePostName(string postName)
-        {
-            return postName.ToLowerInvariant().Replace("-", "");
-        }
-
         public static string PreparePostContentForImagesSearch(string postContent)
         {
             return postContent
@@ -40,70 +39,143 @@ namespace WordPress2Jekyll.ConsoleApp
 
         public IEnumerable<dynamic> GetPosts()
         {
-            return _conn.Query(@"
+            var posts = new List<dynamic>();
+
+            posts.AddRange(_conn.Query(@"
+            SELECT 
+                ID AS Id, 
+                post_title AS Title, 
+                REPLACE(REPLACE(post_name, 'a%c2%a7a', 'ca'), 'i%c2%ad', 'i') AS Name, 
+                post_date As Date, 
+                '' AS Developer,
+                post_content AS Content,
+                cast(cntIdTypeLabel as char(2)) AS Type,
+                'WordPress' as SourceSite
+            FROM wp_posts p
+                LEFT JOIN jdcontent c ON BINARY lower(p.post_title) = BINARY lower(c.cntNmContent)
+            WHERE 
+                post_status = 'publish' 
+                AND post_title <> '' 
+                AND post_type = 'post'
+                AND (@postName IS NULL OR post_name = @postName)
+            ORDER BY post_date 
+            limit @maxPosts offset 0", new { postName = _postName, maxPosts = _maxPosts }));
+
+            var remainingMaxPosts = _maxPosts - posts.Count;
+
+            if (remainingMaxPosts > 0)
+            {
+                posts.AddRange(_conn.Query(@"
                 SELECT 
-                    ID AS Id, 
-                    post_title AS Title, 
-                    REPLACE(REPLACE(post_name, 'a%c2%a7a', 'ca'), 'i%c2%ad', 'i') AS Name, 
-                    post_date As Date, 
-                    post_content AS Content,
-                    CASE 
-                        WHEN post_name LIKE 'promocao%' THEN 'Promo'
-                        WHEN post_name LIKE 'entrevista%' THEN 'Interview'
-                        WHEN post_name LIKE 'previa%' OR post_name LIKE 'preview%' THEN 'Preview'
-                        WHEN c.cntIdTypeLabel IN (10, 24) THEN 'News'
-                        WHEN c.cntIdTypeLabel IN (19, 20) THEN 'Game'
-                        WHEN c.cntIdTypeLabel IN (22, 23) THEN 'Promo'
-                        WHEN c.cntIdTypeLabel IN (25) OR post_name LIKE 'evento%' OR post_name LIKE 'spjam%'  THEN 'Event'
-                        ELSE null
-                    END AS Type
-                FROM wp_posts p
-                    LEFT JOIN jdcontent c ON BINARY lower(p.post_title) = BINARY lower(c.cntNmContent)
+                    cntIdContent AS Id,
+                    cntNmContent AS Title,
+                    '' as Name,
+                    cntDtCreate as Date,
+                    cmpNmCompany Developer,
+                    cpgTxPage as Content,
+                    cast(cntIdTypeLabel as char(2)) AS Type,
+                    'PHP' as SourceSite
+                FROM jdcontent 
+                    INNER JOIN jdcontentpage ON cntIdContent = cpgIdContent
+                    LEFT JOIN jdtechniquefiche ON cntIdContent = tcfIdGame
+                    LEFT JOIN jdtechniquefichedeveloper ON tdvIdTechniqueFiche = tcfIdTechniqueFiche
+                    LEFT JOIN jdcompany ON cmpIdCompany = tdvIdDeveloper
                 WHERE 
-                    post_status = 'publish' 
-                    AND post_title <> '' 
-                    AND post_type = 'post'
-                    AND (@postName IS NULL OR post_name = @postName)
-                ORDER BY post_date 
-                limit @maxPosts offset 0", new { postName = _postName, maxPosts = _maxPosts });
+                    cntidcontent > 242 
+                ORDER BY
+                    cntDtCreate DESC
+                limit @maxPosts offset 0", new { postName = _postName, maxPosts = remainingMaxPosts }));
+            }
+
+            foreach(var p in posts)
+            {
+                if (String.IsNullOrEmpty(p.Name))
+                    p.Name = StringHelper.UrlFriendly(p.Title);
+
+                 p.Type = PostHelper.GetPostType(p);
+            }
+
+            return posts
+                .Where(p => _postName == null || p.Name.Equals(_postName))
+                .ToList();
         }
 
         public IEnumerable<dynamic> GetPostImages(dynamic post)
         {
-            // Da tabela wp_postmeta.
-            var results = _conn.Query(@"
+            var results = new List<dynamic>();
+
+            if (post.SourceSite.Equals("WordPress"))
+            {
+                // Da tabela wp_postmeta.
+                results.AddRange(_conn.Query(@"
                 SELECT meta_value AS Path
                 FROM wp_postmeta 
-                WHERE meta_key = '_wp_attached_file' AND post_id = @Id", new { post.Id }).ToList();
+                WHERE meta_key = '_wp_attached_file' AND post_id = @Id", new { post.Id }));
 
 
-            // Da tabela wp_ewwwio_images.
-            var postNameNormalized = NormalizePostName(post.Name);
-            results.AddRange(_conn.Query(@"
+                // Da tabela wp_ewwwio_images.
+                var postNameNormalized = StringHelper.NormalizePostName(post.Name);
+                results.AddRange(_conn.Query(@"
                 SELECT REPLACE(path, '/var/www/wp-content/uploads/', '') as Path 
                 FROM wp_ewwwio_images 
-                WHERE (path LIKE @path OR path LIKE @normalizedPath) AND path NOT LIKE '%x%'",new 
-            { 
-                path = $"%{post.Date:yyyy/MM}/{post.Name}%",
-                normalizedPath = $"%{post.Date:yyyy/MM}/{postNameNormalized}%"
-            }));
-
-            // Da tabela wp_gallery_galleries.
-            var galleryMatch = GalleryIdFromPostContentRegex.Match(post.Content);
-
-            if (galleryMatch.Success)
-            {
-                results.AddRange(_conn.Query(@"
-                SELECT REPLACE(image_url, 'http://jogosdaqui.com.br/wp-content/uploads/', '') as Path
-                FROM wp_gallery_galleries g
-                    INNER JOIN wp_gallery_galleriesslides gs ON g.Id = gs.gallery_id
-                    INNER JOIN wp_gallery_slides s ON gs.slide_id = s.id
-                WHERE g.Id = @galleryId
-                ", new
+                WHERE (path LIKE @path OR path LIKE @normalizedPath) AND path NOT LIKE '%x%'", new
                 {
-                    galleryId = galleryMatch.Groups[1].Value
+                    path = $"%{post.Date:yyyy/MM}/{post.Name}%",
+                    normalizedPath = $"%{post.Date:yyyy/MM}/{postNameNormalized}%"
                 }));
+
+                // Da tabela wp_gallery_galleries.
+                var galleryMatch = GalleryIdFromPostContentRegex.Match(post.Content);
+
+                if (galleryMatch.Success)
+                {
+                    results.AddRange(_conn.Query(@"
+                    SELECT REPLACE(image_url, 'http://jogosdaqui.com.br/wp-content/uploads/', '') as Path
+                    FROM wp_gallery_galleries g
+                        INNER JOIN wp_gallery_galleriesslides gs ON g.Id = gs.gallery_id
+                        INNER JOIN wp_gallery_slides s ON gs.slide_id = s.id
+                    WHERE g.Id = @galleryId
+                    ", new
+                    {
+                        galleryId = galleryMatch.Groups[1].Value
+                    }));
+                }
             }
+            else if (post.Id > 242)
+            {
+                // Da tabela jdSlideShow.
+                var slideShowResult = _conn.QueryFirstOrDefault(@"
+                SELECT
+                    slsIdSlideShow AS 'SlideShowId'
+                FROM 
+                    jdslideshow
+                WHERE slsIdcontent = @idContent
+                ", new { idContent = post.Id });
+               
+                if (slideShowResult != null)
+                {
+                    var folder = Path.Combine(PhpSiteSlidesShowFolder, slideShowResult.SlideShowId.ToString());
+
+                    if (Directory.Exists(folder))
+                    {
+                        var folderImages = Directory.GetFiles(folder);
+
+                        foreach (var fi in folderImages)
+                        {
+                            results.Add(new { Path = fi.Replace($"{PhpSiteSlidesShowFolder}/", String.Empty) });
+                        }
+                    }
+                }
+
+                // Pasta de logos.
+                var logoFolder = Path.Combine(PhpSiteImagesFolder, "logos");
+                var logoFiles = Directory.GetFiles(logoFolder, $"{StringHelper.NormalizePostName(post.Name)}.*");
+
+                if (logoFiles.Length > 0)
+                {
+                    results.Add(new { Path = logoFiles[0].Replace($"{PhpSiteLogosFolder}/", String.Empty) });
+                }
+             }
 
             // Garante que a regex vão obter todas as imagens nos posts que estão salvos inteiramente numa única linha.
             var normalizedContent = PreparePostContentForImagesSearch(post.Content);

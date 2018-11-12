@@ -60,11 +60,11 @@ INSERT INTO `jdcompany` VALUES (13, 'Inflammatio Entretenimento', NULL, 'http://
 INSERT INTO `jdcompany` VALUES (14, 'Leandro Correia', NULL, 'http://www.leandrocorreia.com', NULL);
 INSERT INTO `jdcompany` VALUES (15, 'Locz Games', NULL, 'http://www.locz.com.br', NULL);
 INSERT INTO `jdcompany` VALUES (16, 'Marcos Riffel', NULL, 'http://www.geocities.com/marcosriffel', NULL);
-INSERT INTO `jdcompany` VALUES (17, 'Matheus Degiovani', NULL, 'http://www.tilt.net', NULL);
+INSERT INTO `jdcompany` VALUES (17, 'TILT', NULL, 'http://www.tilt.net', NULL);
 INSERT INTO `jdcompany` VALUES (18, 'Nology Software', NULL, 'http://www.nology.com.br', NULL);
 INSERT INTO `jdcompany` VALUES (19, 'Oniria Entertainment', NULL, 'http://www.oniriagames.com.br', NULL);
 INSERT INTO `jdcompany` VALUES (20, 'Perceptum', NULL, 'http://www.perceptum.com', NULL);
-INSERT INTO `jdcompany` VALUES (21, 'Renato Degiovani', NULL, 'http://www.tilt.net', NULL);
+INSERT INTO `jdcompany` VALUES (21, 'TILT', NULL, 'http://www.tilt.net', NULL);
 INSERT INTO `jdcompany` VALUES (22, 'SGuerra Design', NULL, 'http://www.sguerra.com.br', NULL);
 INSERT INTO `jdcompany` VALUES (23, 'SLotman', NULL, NULL, NULL);
 INSERT INTO `jdcompany` VALUES (24, 'Sorvete Games', NULL, NULL, NULL);
@@ -581,8 +581,8 @@ INSERT INTO `jdcontent` VALUES (461, 10, 'Cat Fighters, novo Lançamento da Palm
 INSERT INTO `jdcontent` VALUES (462, 10, 'Dance Mania fica em 2o no Java Masters', 1, '2006-08-08 08:41:47', '2006-08-08 08:45:11');
 INSERT INTO `jdcontent` VALUES (463, 24, 'Abragames na GC 2006', 1, '2006-08-20 20:56:49', '2006-08-20 21:06:21');
 INSERT INTO `jdcontent` VALUES (464, 10, 'Abragames na GC 2006', 1, '2006-08-20 21:01:52', '2006-08-20 21:06:13');
-INSERT INTO `jdcontent` VALUES (465, 19, 'CrossFox Ãgil', 1, '2006-08-22 08:28:34', '2006-08-22 08:46:03');
-INSERT INTO `jdcontent` VALUES (466, 10, 'CrossFox Ãgil da Microways', 1, '2006-08-22 08:43:23', '2006-08-22 08:45:55');
+INSERT INTO `jdcontent` VALUES (465, 19, 'CrossFox Ágil', 1, '2006-08-22 08:28:34', '2006-08-22 08:46:03');
+INSERT INTO `jdcontent` VALUES (466, 10, 'CrossFox Ágil da Microways', 1, '2006-08-22 08:43:23', '2006-08-22 08:45:55');
 INSERT INTO `jdcontent` VALUES (467, 24, 'Jogo da Scotland Yard pela nTime', 1, '2006-08-23 23:41:10', '2006-08-23 23:45:35');
 INSERT INTO `jdcontent` VALUES (468, 10, 'Jogo da Scotland Yard pela nTime', 1, '2006-08-23 23:44:32', '2006-08-23 23:45:30');
 INSERT INTO `jdcontent` VALUES (469, 10, 'NewsAbragames Agosto/2006', 1, '2006-08-25 07:17:52', '2006-09-14 21:06:35');
@@ -819,7 +819,7 @@ INSERT INTO `jdcontentcommentary` VALUES (182, 54, 837, 'Ta demoranuu!!!', 'vcs 
 INSERT INTO `jdcontentcommentary` VALUES (183, 19, 866, 'Para jogar?', 'como faz para jogar esse big brother brasil!?\r\n\r\nabraço', '2007-01-03 23:24:08', 1);
 INSERT INTO `jdcontentcommentary` VALUES (184, 17, 867, 'muito legal    POR FAVOR', 'Pessoal  como faço para comprar esse jogo se alguem suber de alguma coisa me manda para meu hotmail marcos_beza@hotmail.com ..\r\nPor favor me mande eu queru jogar ... se alguem tem para me dar melhor mais se alguem suber como possu comprar me manda \r\n\r\n\r\nAgradeserei muito ', '2007-01-04 11:32:27', 0);
 INSERT INTO `jdcontentcommentary` VALUES (185, 17, 867, 'Muito legal por favor', 'Se alguem suber como eu possu comprar esse jogo me manda informaçoes para meu hotmail marcos_beza@hotmail.com.... eu queru jogar ... se alguem tiver para me dar é melhor  ... mais se souber como comprar me manda gente \r\n\r\n\r\n ficarei muito agradecido', '2007-01-04 11:34:23', 0);
-INSERT INTO `jdcontentcommentary` VALUES (186, 19, 869, 'COMO JOGAR????????????????????????', 'OI PESSOAL LOGO PELO TITULO JÃ DEU PRA PERCEBER Q O JOGO Ã MUITO LEGAL EU QUERO SABER COMO EU FAÃO PARA JOGAR APOSTO Q EU VOU ME DIVERTIR MUITO', '2007-01-04 20:41:54', 1);
+INSERT INTO `jdcontentcommentary` VALUES (186, 19, 869, 'COMO JOGAR????????????????????????', 'OI PESSOAL LOGO PELO TITULO JÁ DEU PRA PERCEBER Q O JOGO Ã MUITO LEGAL EU QUERO SABER COMO EU FAÃO PARA JOGAR APOSTO Q EU VOU ME DIVERTIR MUITO', '2007-01-04 20:41:54', 1);
 INSERT INTO `jdcontentcommentary` VALUES (187, 19, 867, 'como faço para jogar ??/', 'Se alguem suber como faço para jogar me manda informaçoes para meu hotmail marcosbeza@hotmail.com\r\n\r\nme manda por favor ', '2007-01-05 11:07:42', 0);
 INSERT INTO `jdcontentcommentary` VALUES (188, 19, 875, 'como se joga BBB', 'como e q s joga esse bbb', '2007-01-06 16:45:33', 1);
 INSERT INTO `jdcontentcommentary` VALUES (189, 19, 875, NULL, 'e so pagando e', '2007-01-06 16:45:59', 0);
@@ -832,7 +832,7 @@ INSERT INTO `jdcontentcommentary` VALUES (195, 17, 887, 'como jogar??', 'o jogo 
 INSERT INTO `jdcontentcommentary` VALUES (196, 17, 837, NULL, 'Esse jogo  tem kra de ser legal mas naum mostra como podemos iniar o jogo e/ou como podemos jogar...\r\n\r\nAi fik pai né a galera que jogar!!! ', '2007-01-09 16:04:39', 0);
 INSERT INTO `jdcontentcommentary` VALUES (197, 19, 837, 'hehehe', 'To consiguindo jogar numa boa!!!', '2007-01-09 16:20:26', 0);
 INSERT INTO `jdcontentcommentary` VALUES (198, 478, 900, 'Versão DEMO', 'Aonde eu posso baixar a versão demo desse jogo, por favor me ajudem... Mandem a resposta para stefan_faller@hotmail.com\r\n', '2007-01-11 15:47:01', 1);
-INSERT INTO `jdcontentcommentary` VALUES (199, 54, 904, 'QUANDO ESTÃ?????', 'EU GOSTARIA POR GENTILEZA Q TODOS AI Q SOUBEREM Q ESTEVER PRONTO ME AVISEM POR FAVOR!!!                                       \r\n \r\n\r\n\r\n                                  \r\n                                               AGUARDO.\r\n                                       OBRIGADO!!!!!', '2007-01-12 23:44:07', 0);
+INSERT INTO `jdcontentcommentary` VALUES (199, 54, 904, 'QUANDO ESTÁ?????', 'EU GOSTARIA POR GENTILEZA Q TODOS AI Q SOUBEREM Q ESTEVER PRONTO ME AVISEM POR FAVOR!!!                                       \r\n \r\n\r\n\r\n                                  \r\n                                               AGUARDO.\r\n                                       OBRIGADO!!!!!', '2007-01-12 23:44:07', 0);
 INSERT INTO `jdcontentcommentary` VALUES (200, 17, 909, 'Como faz para baixar?', 'Queria saber como faz para baixar este jogo ou onde compre este jogo!', '2007-01-14 14:20:54', 0);
 INSERT INTO `jdcontentcommentary` VALUES (201, 19, 912, 'Como faço o download?', 'Naum sei onde eu faço o download completo do jogo? o demo eu jah tenho, mas agora quero o completo. Por favor me ajudem!!!', '2007-01-15 15:10:11', 0);
 INSERT INTO `jdcontentcommentary` VALUES (202, 54, 918, 'transportando o Brasil', 'Quando que tem previsao de Lançamento? E aonde poderemos encontrar o demo?\r\n', '2007-01-16 21:23:37', 1);
@@ -2821,7 +2821,7 @@ INSERT INTO `jdimage` VALUES (256, 443, 'Gambler Saga', '/image/logos/gamblerSag
 INSERT INTO `jdimage` VALUES (258, 450, 'Grand Pri', '/image/logos/grandpri.jpg');
 INSERT INTO `jdimage` VALUES (259, 458, 'Play Gool', '/image/logos/playGool.jpg');
 INSERT INTO `jdimage` VALUES (260, 460, 'Cat Fighters', '/image/logos/catFighters.gif');
-INSERT INTO `jdimage` VALUES (261, 465, 'CrossFox Ãgil', '/image/logos/crossfoxAgil.jpg');
+INSERT INTO `jdimage` VALUES (261, 465, 'CrossFox Ágil', '/image/logos/crossfoxAgil.jpg');
 INSERT INTO `jdimage` VALUES (262, 478, 'Thoroughbred Tycoon', '/image/logos/ThoroughbredTycoon.gif');
 INSERT INTO `jdimage` VALUES (263, 489, 'Bunny Smash', '/image/logos/bunnySmash.gif');
 INSERT INTO `jdimage` VALUES (264, 502, 'Menininhas', '/image/logos/menininhas.gif');

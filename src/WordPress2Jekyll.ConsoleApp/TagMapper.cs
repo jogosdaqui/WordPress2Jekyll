@@ -32,6 +32,9 @@ namespace WordPress2Jekyll.ConsoleApp
                     tags.AddRange(kt.Value.Split(' '));
             }
 
+            if (!String.IsNullOrEmpty(post.Developer))
+                tags.Add(post.Developer.ToLowerInvariant());
+
             return String.Join(" ", tags.Distinct());
         }
     }

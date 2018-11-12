@@ -8,7 +8,13 @@ namespace WordPress2Jekyll.ConsoleApp
 {
     public class JekyllWriter
     {
-        private readonly string _imagesSourceRootFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../..", "setup/images/galleries");
+        private readonly string[] _imagesSourceRootFolders = new string[]
+        {
+            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../..", "setup/images/wordpress-site/galleries"),
+            WordPressReader.PhpSiteSlidesShowFolder,
+            WordPressReader.PhpSiteLogosFolder
+        };
+
         private readonly string _imagesOutputRootFolder = "/Users/giacomelli/Projects/jogosdaqui.github.io-jekyll/images/galleries";
         private readonly string _postsOutputRootFolder = Path.Combine("/Users/giacomelli/Projects/jogosdaqui.github.io-jekyll/_posts");
         private static readonly Regex _wordPressTagsRegex = new Regex(@"\[tribulant_slideshow.+\]", RegexOptions.Compiled);
@@ -32,8 +38,9 @@ namespace WordPress2Jekyll.ConsoleApp
 $@"---
 published: true
 layout: post
-title: '{ConvertPostTitle(post.Title)}'
-categories: {post.Type}
+title: '{PrepareToMetaTag(post.Title)}'
+companies: '{PrepareToMetaTag(post.Developer)}'
+categories: {GetPostType(post)}
 tags: {TagMapper.GetTags(post)}
 ---
 {ConvertPostContent(post.Content)}";
@@ -46,6 +53,14 @@ tags: {TagMapper.GetTags(post)}
                 File.WriteAllText($"{fileName}.source.txt", post.Content);
 
             WritePostImages(post);
+        }
+
+        private object GetPostType(dynamic post)
+        {
+            if (String.IsNullOrEmpty(post.Type))
+                return null;
+
+            return PostHelper.GetPostType(post);
         }
 
         private void WritePostImages(dynamic post)
@@ -66,7 +81,7 @@ tags: {TagMapper.GetTags(post)}
                 // então faz o arquivo ter o nome 'logo' no destino.
                 if (!logoFound &&
                    (filenameWithoutExtension.Equals(post.Name, StringComparison.OrdinalIgnoreCase)
-                   || filenameWithoutExtension.Equals(WordPressReader.NormalizePostName(post.Name), StringComparison.OrdinalIgnoreCase)
+                   || filenameWithoutExtension.Equals(StringHelper.NormalizePostName(post.Name), StringComparison.OrdinalIgnoreCase)
                    || filenameWithoutExtension.Contains("logo")
                    || images.Count() == 1))
                 {
@@ -74,18 +89,31 @@ tags: {TagMapper.GetTags(post)}
                     filename = $"logo{Path.GetExtension(path)}";
                 }
 
-                var sourcePath = Path.Combine(_imagesSourceRootFolder, path);
-                var outputPath = Path.Combine(galleryOutputPath, filename);
+                string sourcePath = null;
 
-                if (File.Exists(sourcePath))
+                foreach (var folder in _imagesSourceRootFolders)
+                { 
+                    sourcePath = Path.Combine(folder, path);
+
+                    if (File.Exists(sourcePath))
+                        break;
+                    else
+                        sourcePath = null;
+                }
+
+                if (sourcePath != null)
+                {
+                    var outputPath = Path.Combine(galleryOutputPath, filename);
                     File.Copy(sourcePath, outputPath, true);
+                }
             }
-
-
         }
 
-        private string ConvertPostTitle(string title)
+        private string PrepareToMetaTag(string title)
         {
+            if (String.IsNullOrEmpty(title))
+                return title;
+
             return title
                 .Replace("'", "&#39;")
                 .Replace("Apoie o jogo brasileiro Cowboy vs Aliens vs Ninjas", "Apoie o jogo brasileiro Comboy vs Aliens vs Ninjas"); // Tem um char especial no nome original q não consegui identificar.

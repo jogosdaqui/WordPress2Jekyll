@@ -248,6 +248,7 @@ arc-gen
 checkpoint
 imagens da semana
 legends online = informe-publicitario
+eélirus entertainment
 délirus entertainment = delirus-entertainment
 gênero “puzzle” = puzzle
 quebra-cabeça = puzzle
@@ -282,3 +283,7 @@ horizon chase = corrida
 incidente em varginha = FPS
 mensalão, o jogo = tilt
 soundcloud = trilha-sonora
+ludusware
+decadium studios
+imax games
+wd studio

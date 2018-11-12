@@ -88,3 +88,7 @@
 
 \[sc:.*Soundcloud trackid=.(?<id>\d+).+\]
 {% soundcloud ${id} %}
+
+#SLIDESHOW#\d+#/SLIDESHOW#
+
+#SLIDESHOWONE#\d+#/SLIDESHOWONE#
