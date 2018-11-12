@@ -55,12 +55,15 @@ tags: {TagMapper.GetTags(post)}
             WritePostImages(post);
         }
 
-        private object GetPostType(dynamic post)
+        private string GetPostType(dynamic post)
         {
-            if (String.IsNullOrEmpty(post.Type))
-                return null;
+            if (!String.IsNullOrEmpty(post.Type))
+                return post.Type;
 
-            return PostHelper.GetPostType(post);
+            var type = PostHelper.GetPostType(post);
+
+            return type == null
+                ? "News" : PrepareToMetaTag(type);
         }
 
         private void WritePostImages(dynamic post)

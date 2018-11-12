@@ -58,7 +58,7 @@ namespace WordPress2Jekyll.ConsoleApp
                 AND post_title <> '' 
                 AND post_type = 'post'
                 AND (@postName IS NULL OR post_name = @postName)
-            ORDER BY post_date 
+            ORDER BY post_date DESC
             limit @maxPosts offset 0", new { postName = _postName, maxPosts = _maxPosts }));
 
             var remainingMaxPosts = _maxPosts - posts.Count;
