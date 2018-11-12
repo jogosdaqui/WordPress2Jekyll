@@ -7,11 +7,12 @@ namespace WordPress2Jekyll.ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando a conversão...");
-            string postName = "mago-das-ervas";
+            string postName = null;
+            int maxPosts = int.MaxValue;
             bool writeSourceContent = !String.IsNullOrEmpty(postName);
             int postCount = 0;
 
-            using (var reader = new WordPressReader(postName))
+            using (var reader = new WordPressReader(postName, maxPosts))
             {
                 var writer = new JekyllWriter(reader, writeSourceContent);
 

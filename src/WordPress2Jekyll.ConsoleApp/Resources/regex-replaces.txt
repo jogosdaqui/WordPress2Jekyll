@@ -85,3 +85,6 @@
 
 \[sc:.*Interview_header.text=.(?<text>.+).{2,}\]
 #### ${text}
+
+\[sc:.*Soundcloud trackid=.(?<id>\d+).+\]
+{% soundcloud ${id} %}

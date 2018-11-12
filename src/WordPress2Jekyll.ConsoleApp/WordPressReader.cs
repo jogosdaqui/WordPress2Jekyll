@@ -16,10 +16,12 @@ namespace WordPress2Jekyll.ConsoleApp
 
         private readonly MySqlConnection _conn;
         private readonly string _postName;
+        private readonly int _maxPosts;
 
-        public WordPressReader(string postName = null)
+        public WordPressReader(string postName = null, int maxPosts = int.MaxValue)
         {
             _postName = postName;
+            _maxPosts = maxPosts;
             _conn = new MySqlConnection("Server=127.0.0.1;Database=jogosdaqui;Uid=root;Pwd=adm123!@#");
         }
 
@@ -44,15 +46,26 @@ namespace WordPress2Jekyll.ConsoleApp
                     post_title AS Title, 
                     REPLACE(REPLACE(post_name, 'a%c2%a7a', 'ca'), 'i%c2%ad', 'i') AS Name, 
                     post_date As Date, 
-                    post_content AS Content
-                FROM wp_posts 
+                    post_content AS Content,
+                    CASE 
+                        WHEN post_name LIKE 'promocao%' THEN 'Promo'
+                        WHEN post_name LIKE 'entrevista%' THEN 'Interview'
+                        WHEN post_name LIKE 'previa%' OR post_name LIKE 'preview%' THEN 'Preview'
+                        WHEN c.cntIdTypeLabel IN (10, 24) THEN 'News'
+                        WHEN c.cntIdTypeLabel IN (19, 20) THEN 'Game'
+                        WHEN c.cntIdTypeLabel IN (22, 23) THEN 'Promo'
+                        WHEN c.cntIdTypeLabel IN (25) OR post_name LIKE 'evento%' OR post_name LIKE 'spjam%'  THEN 'Event'
+                        ELSE null
+                    END AS Type
+                FROM wp_posts p
+                    LEFT JOIN jdcontent c ON BINARY lower(p.post_title) = BINARY lower(c.cntNmContent)
                 WHERE 
                     post_status = 'publish' 
                     AND post_title <> '' 
                     AND post_type = 'post'
                     AND (@postName IS NULL OR post_name = @postName)
                 ORDER BY post_date 
-                -- limit 10 offset 0", new { postName = _postName });
+                limit @maxPosts offset 0", new { postName = _postName, maxPosts = _maxPosts });
         }
 
         public IEnumerable<dynamic> GetPostImages(dynamic post)

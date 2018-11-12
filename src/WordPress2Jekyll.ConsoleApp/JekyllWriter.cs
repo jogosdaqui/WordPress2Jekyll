@@ -31,8 +31,9 @@ namespace WordPress2Jekyll.ConsoleApp
             var fileContent =
 $@"---
 published: true
-layout: game
+layout: post
 title: '{ConvertPostTitle(post.Title)}'
+categories: {post.Type}
 tags: {TagMapper.GetTags(post)}
 ---
 {ConvertPostContent(post.Content)}";
