@@ -26,7 +26,6 @@ namespace WordPress2Jekyll.ConsoleApp
             }
 
             Console.WriteLine("Conversão finalizada.");
-            Console.ReadKey();
         }
     }
 }

@@ -231,8 +231,8 @@ gamecraft = gamecraft evento
 currant cat
 dynamic light
 entrevista
-prévia = preview
-preview = preview
+prévia = previa
+preview = previa
 global game jam = global-game-jam evento
 cats in the sky
 zeebo

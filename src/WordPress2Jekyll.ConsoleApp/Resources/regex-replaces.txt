@@ -2,7 +2,7 @@
 
 \[tribulant_slideshow.+\]
 
-(\[sc:.*Youtube videoid=.(?<id>[a-z0-9_-]+).+\]|httpv://youtu.be/(?<id>[a-z0-9_-]+)|<object.+http://www.youtube.com/v/(?<id>[a-z0-9_-]+).+</object>|<a href="https://www.youtube.com/watch\?v=(?<id>[a-z0-9_-]+)">https://www.youtube.com/watch\?v=[a-z0-9_-]+</a>)
+(\[sc:.*Youtube videoid=.(?<id>[a-z0-9_-]+).+\]|http.*://youtu.be/(?<id>[a-z0-9_-]+)|<object.+http://www.youtube.com/v/(?<id>[a-z0-9_-]+).+</object>|<a href="https://www.youtube.com/watch\?v=(?<id>[a-z0-9_-]+)">https://www.youtube.com/watch\?v=[a-z0-9_-]+</a>)
 {% youtube ${id} %}
 
 (\[sc:Vimeo videoid=.(?<id>\d+).{2,}\]|<object .+vimeo.+clip_id=(?<id>\d+).+</object>)
@@ -65,7 +65,8 @@
 ## ${question}
 > ${interviewee}: ${answer}
 
-\[caption id=.attachment_(?<id>\d+).+\]
+\[caption.+id=.attachment_(?<id>\d+).+\].+<img.+src=.+uploads/(?<image>\S+).{2,}\[/caption\]
+{% screenshot ${image} %}
 
 \[sc:.*Checkpoint_header.*\]
 

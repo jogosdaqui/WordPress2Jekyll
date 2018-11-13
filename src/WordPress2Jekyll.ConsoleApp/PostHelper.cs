@@ -6,8 +6,8 @@ namespace WordPress2Jekyll.ConsoleApp
         public static string GetPostType(dynamic post)
         {
             var type = post.Type;
-          
             var name = post.Name;
+            var content = post.Content.ToLowerInvariant();
 
             if (name.StartsWith("promocao"))
                 return "Promo";
@@ -21,23 +21,39 @@ namespace WordPress2Jekyll.ConsoleApp
             if (name.StartsWith("evento") || name.StartsWith("spjam"))
                 return "Event";
 
-            if (type == null)
-                return null;
+            if (name.StartsWith("checkpoint")
+                || name.StartsWith("imagens-da-semana") 
+                || name.StartsWith("insert-coins")
+                || content.StartsWith("insert coins"))
+                return "Column";
 
-            if(type.Equals("20"))
-                return "Preview";
+            if (type != null)
+            {
 
-            if (type.Equals("10") || type.Equals("24"))
-                return "News";
+                if (type.Equals("20"))
+                    return "Preview";
 
-            if (type.Equals("19"))
+                if (type.Equals("10") || type.Equals("24"))
+                    return "News";
+
+                if (type.Equals("19"))
+                    return "Game";
+
+                if (type.Equals("22") || type.Equals("23"))
+                    return "Promo";
+
+                if (type.Equals("25"))
+                    return "Event";
+            }
+
+            if ((content.Contains("está disponível")
+                 || content.Contains("jogo é gratuito") 
+                 || content.Contains("lançado para")
+                 || content.Contains("recém lançado"))
+                && !name.Contains(" demo ")
+                && !content.Contains("demo jogável") 
+                && !content.Contains("beta test"))
                 return "Game";
-
-            if (type.Equals("22") || type.Equals("23"))
-                return "Promo";
-
-            if (type.Equals("25"))
-                return "Event";
 
             return null;
         }

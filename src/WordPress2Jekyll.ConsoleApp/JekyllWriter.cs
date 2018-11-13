@@ -34,14 +34,16 @@ namespace WordPress2Jekyll.ConsoleApp
 
         public void WritePost(dynamic post)
         {
+            var tags = TagMapper.GetTags(post);
+
             var fileContent =
 $@"---
 published: true
 layout: post
 title: '{PrepareToMetaTag(post.Title)}'
 companies: '{PrepareToMetaTag(post.Developer)}'
-categories: {GetPostType(post)}
-tags: {TagMapper.GetTags(post)}
+categories: {GetPostType(post, tags)}
+tags: {tags}
 ---
 {ConvertPostContent(post.Content)}";
 
@@ -55,12 +57,24 @@ tags: {TagMapper.GetTags(post)}
             WritePostImages(post);
         }
 
-        private string GetPostType(dynamic post)
+        private string GetPostType(dynamic post, string tags)
         {
             if (!String.IsNullOrEmpty(post.Type))
                 return post.Type;
 
             var type = PostHelper.GetPostType(post);
+
+            if (type == null)
+            {
+                if (tags.Contains("evento"))
+                    type = "Event";
+
+                if (tags.Contains("entrevista"))
+                    type = "Interview";
+
+                if (tags.Contains("previa"))
+                    type = "Preview";
+            }
 
             return type == null
                 ? "News" : PrepareToMetaTag(type);
