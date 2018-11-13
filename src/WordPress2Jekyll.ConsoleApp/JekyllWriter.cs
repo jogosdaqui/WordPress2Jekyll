@@ -24,12 +24,22 @@ namespace WordPress2Jekyll.ConsoleApp
 
         private readonly WordPressReader _reader;
         private readonly bool _writeSourceContent;
+        private readonly string[] AllSourceImages;
 
         public JekyllWriter(WordPressReader reader, bool writeSourceContent = false)
         {
             _reader = reader;
             _writeSourceContent = writeSourceContent;
             Directory.CreateDirectory(_postsOutputRootFolder);
+
+            var images = new List<string>();
+
+            foreach (var folder in _imagesSourceRootFolders)
+            {
+                images.AddRange(Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories).Select(f => f.Replace($"{folder}/", String.Empty)));
+            }
+
+            AllSourceImages = images.OrderBy(f => f.Length).ToArray();
         }
 
         public void WritePost(dynamic post)
@@ -82,11 +92,18 @@ tags: {tags}
 
         private void WritePostImages(dynamic post)
         {
-            IEnumerable<dynamic> images = _reader.GetPostImages(post);
+            var images = new List<dynamic>(_reader.GetPostImages(post));
             var galleryOutputPath = Path.Combine(_imagesOutputRootFolder, post.Date.ToString("yyyy/MM/dd"), post.Name);
             Directory.CreateDirectory(galleryOutputPath);
 
             var logoFound = false;
+
+            var logo = FindLogoFromSourceRootFolders(post);
+
+            if (logo != null && !images.Contains(logo))
+            {
+                images.Add(new { Path = logo });
+            }
 
             foreach (var img in images)
             {
@@ -121,9 +138,36 @@ tags: {tags}
                 if (sourcePath != null)
                 {
                     var outputPath = Path.Combine(galleryOutputPath, filename);
-                    File.Copy(sourcePath, outputPath, true);
+
+                    // Se já existe o arquivo ou um arquivo com outra extensão, mas com o mesmo nome
+                    // então não faz cópia.
+                    if (!File.Exists(outputPath) && Directory.GetFiles(galleryOutputPath, $"{Path.GetFileNameWithoutExtension(filename)}.*").Length == 0)
+                        File.Copy(sourcePath, outputPath);
                 }
             }
+        }
+
+        private string FindLogoFromSourceRootFolders(dynamic post)
+        {
+            var name = post.Name;
+
+            var image = AllSourceImages.FirstOrDefault(
+                f => f.Contains("logo")
+                && (f.Contains(name, StringComparison.OrdinalIgnoreCase) || f.Contains(StringHelper.NormalizePostName(name), StringComparison.OrdinalIgnoreCase)));
+
+            if (image == null)
+            {
+                if (post.Name.Contains("imagens-da-semana"))
+                    image = AllSourceImages.FirstOrDefault(f => f.StartsWith($"{post.Date:yyyy/MM}/{StringHelper.NormalizePostName(post.Name)}"));
+
+                if (image == null && post.Content.Contains("Insert Coins"))
+                    image = "2015/05/InsertCoins_logo.png";
+
+                if (image == null && post.Name.Contains("splitplay"))
+                    image = "2015/05/SplitPlay.png";
+            }
+
+            return image;
         }
 
         private string PrepareToMetaTag(string title)
