@@ -1,0 +1,1082 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+          <link rel="canonical" href="http://jogosdaqui.com.br">
+<!-- HTML meta refresh URL redirection -->
+   <meta http-equiv="refresh" 
+   content="0; url=http://jogosdaqui.com.br"/>
+
+	  <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+	  <meta http-equiv="Content-Language" content="pt-br" />
+	  <link type="text/css" rel="stylesheet" href="http://www3.uol.com.br/interacao/blog/jogos-daqui/styles.css" />
+	  <link type="image/x-icon" rel="shortcut icon" href="http://jogosdaqui.sites.uol.com.br/blog/images/favicon.ico" />
+	  <link rel="apple-touch-icon" href="http://home.img.uol.com.br/icon-touch.png" />
+	  <title>Blog jogosdaqui -  Tudo sobre os games desenvolvidos no Brasil</title>
+	  <script type="text/javascript" src="http://barra.uol.com.br/b/scripts/1024/bv1.js?refbusca="></script>
+	  <script type="text/javascript" src="http://lib.uol.com.br/uollib.ajax/uollib.ajax.js"></script>
+	  <script type="text/javascript" src="http://www3.uol.com.br/interacao/blog/jogos-daqui/functions.js"></script>
+	  <script type="text/javascript">document.domain = "uol.com.br";</script>
+		<script>
+         
+         //<![CDATA[
+
+         // Declaração das variáveis
+         d=document
+         var periodoMesAtual=""
+         var periodoAnoAtual=""
+         var k=0
+         var j=0
+         var periodo= new Array()
+         var periodoURL= new Array()
+         var comm = "Comente";
+         var url
+         var XHR = false
+
+      
+         periodo[k++]="01/03/2015 a 31/03/2015"
+         periodoURL[j++]="arch2015-03-01_2015-03-31.html"
+         periodo[k++]="01/11/2014 a 30/11/2014"
+         periodoURL[j++]="arch2014-11-01_2014-11-30.html"
+         periodo[k++]="01/06/2014 a 30/06/2014"
+         periodoURL[j++]="arch2014-06-01_2014-06-30.html"
+         periodo[k++]="01/05/2014 a 31/05/2014"
+         periodoURL[j++]="arch2014-05-01_2014-05-31.html"
+         periodo[k++]="01/04/2014 a 30/04/2014"
+         periodoURL[j++]="arch2014-04-01_2014-04-30.html"
+         periodo[k++]="01/06/2013 a 30/06/2013"
+         periodoURL[j++]="arch2013-06-01_2013-06-30.html"
+         periodo[k++]="01/05/2013 a 31/05/2013"
+         periodoURL[j++]="arch2013-05-01_2013-05-31.html"
+         periodo[k++]="01/04/2013 a 30/04/2013"
+         periodoURL[j++]="arch2013-04-01_2013-04-30.html"
+         periodo[k++]="01/03/2013 a 31/03/2013"
+         periodoURL[j++]="arch2013-03-01_2013-03-31.html"
+         periodo[k++]="01/02/2013 a 28/02/2013"
+         periodoURL[j++]="arch2013-02-01_2013-02-28.html"
+         periodo[k++]="01/01/2013 a 31/01/2013"
+         periodoURL[j++]="arch2013-01-01_2013-01-31.html"
+         periodo[k++]="01/12/2012 a 31/12/2012"
+         periodoURL[j++]="arch2012-12-01_2012-12-31.html"
+         periodo[k++]="01/11/2012 a 30/11/2012"
+         periodoURL[j++]="arch2012-11-01_2012-11-30.html"
+         periodo[k++]="01/10/2012 a 31/10/2012"
+         periodoURL[j++]="arch2012-10-01_2012-10-31.html"
+         periodo[k++]="01/08/2012 a 31/08/2012"
+         periodoURL[j++]="arch2012-08-01_2012-08-31.html"
+         periodo[k++]="01/07/2012 a 31/07/2012"
+         periodoURL[j++]="arch2012-07-01_2012-07-31.html"
+         periodo[k++]="01/06/2012 a 30/06/2012"
+         periodoURL[j++]="arch2012-06-01_2012-06-30.html"
+         periodo[k++]="01/04/2012 a 30/04/2012"
+         periodoURL[j++]="arch2012-04-01_2012-04-30.html"
+         periodo[k++]="01/02/2012 a 29/02/2012"
+         periodoURL[j++]="arch2012-02-01_2012-02-29.html"
+         periodo[k++]="01/01/2012 a 31/01/2012"
+         periodoURL[j++]="arch2012-01-01_2012-01-31.html"
+         periodo[k++]="01/10/2011 a 31/10/2011"
+         periodoURL[j++]="arch2011-10-01_2011-10-31.html"
+         periodo[k++]="01/09/2011 a 30/09/2011"
+         periodoURL[j++]="arch2011-09-01_2011-09-30.html"
+         periodo[k++]="01/05/2011 a 31/05/2011"
+         periodoURL[j++]="arch2011-05-01_2011-05-31.html"
+         periodo[k++]="01/04/2011 a 30/04/2011"
+         periodoURL[j++]="arch2011-04-01_2011-04-30.html"
+         periodo[k++]="01/03/2011 a 31/03/2011"
+         periodoURL[j++]="arch2011-03-01_2011-03-31.html"
+         periodo[k++]="01/02/2011 a 28/02/2011"
+         periodoURL[j++]="arch2011-02-01_2011-02-28.html"
+         periodo[k++]="01/01/2011 a 31/01/2011"
+         periodoURL[j++]="arch2011-01-01_2011-01-31.html"
+         periodo[k++]="01/12/2010 a 31/12/2010"
+         periodoURL[j++]="arch2010-12-01_2010-12-31.html"
+         periodo[k++]="01/11/2010 a 30/11/2010"
+         periodoURL[j++]="arch2010-11-01_2010-11-30.html"
+
+         function abre(url,w,h,scr){
+            window.open(url,'comentarios','width='+w+',height='+h+',directories=0,location=0,menubar=0,resizable=1,scrollbars='+scr+',status=0,toolbar=0,marginleft=0,margintop=0,left=25,top=25')
+         }
+
+         function commentText(qtd) {
+            txtFinal = "(<strong>"+qtd+"</strong>) "+comm;
+            return txtFinal;
+         }
+
+         // Acerta a altura das colunas dos meses para que não haja quebra de layout
+         function defineAlturaColunas(){
+            var arquivo=d.getElementById("calendario").getElementsByTagName("ul")
+            var maiorAltura=0
+            for(i=0;i<arquivo.length;i++){
+               ((arquivo[i].offsetHeight>maiorAltura)?maiorAltura=arquivo[i].offsetHeight:arquivo[i].style.height=maiorAltura)
+            }
+         }
+
+         // Define o nome do mês baseado pelo index
+         function defineMes(numMes){
+            numMes = parseInt(numMes, 10);
+            nomeMes= new Array("","Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
+            return nomeMes[numMes]
+         }
+
+         // Monta o calendário
+         function montaCalendario(){
+            for(i in periodo){
+               var periodoMes=periodo[i].substr(3,2) //Mes
+               var periodoAno=periodo[i].substr(6,4) //Ano
+
+               // Anos
+               if(periodoAnoAtual==""){
+                  d.write('<ol class="ano"><li><strong>'+periodoAno+"<\/strong><\/li>")
+                  periodoAnoAtual=periodoAno
+                  periodoMesAtual=""
+               }else if(periodoAno!=periodoAnoAtual){
+                  d.write('<\/ol><\/ol><ol class="ano"><li><strong>'+periodoAno+"<\/strong><\/li>")
+                  periodoAnoAtual=periodoAno
+                  periodoMesAtual=""
+               }
+
+               // Meses
+               if(periodoMesAtual==""){
+                  d.write('<ul class="mes"><li class="head"><span>'+defineMes(periodoMes)+"<\/span><\/li>")
+                  periodoMesAtual=periodoMes
+               }else if(periodoMes!=periodoMesAtual){
+                  d.write('<\/ul><ul class="mes"><li class="head"><span>'+defineMes(periodoMes)+"<\/span><\/li>")
+                  periodoMesAtual=periodoMes
+               }
+            
+               // Períodos
+               d.write('<li><a href="'+periodoURL[i]+'">'+periodo[i].replace(/\/20[0-9][0-9]/g,"")+"<\/a><\/li>")
+            }
+
+            // Fecha Calendário
+            d.write("<\/ol>")
+         }
+
+
+         // Monta os períodos do arquivo no box lateral
+         function montaPeriodos(){
+               if(periodo.length < 6){numMaximo=periodo.length}else{numMaximo = 5}
+               for(i=0;i<numMaximo;i++)d.write('<li><a id="m" href="'+periodoURL[i]+'">'+periodo[i]+"<\/a><\/li>")
+         }
+
+         // Request XML
+         function makeRequest(url){
+            XHR=false
+
+            if (window.XMLHttpRequest){
+               XHR= new XMLHttpRequest()
+               if(XHR.overrideMimeType)XHR.overrideMimeType('text/xml')
+            }else if(window.ActiveXObject){
+               try{
+                  XHR= new ActiveXObject("Msxml2.XMLHTTP")
+               }catch(e){
+                  try{
+                     XHR = new ActiveXObject("Microsoft.XMLHTTP")
+                  }catch(e){}
+               }
+            }
+
+            if(!XHR){
+               alert('Erro! :( Não foi possível criar Ajax')
+               return false
+            }
+
+            XHR.onreadystatechange=alertContents
+            XHR.open('GET',url,true)
+            XHR.send(null)
+         }
+
+         function alertContents(){
+            if (XHR.readyState==4 && XHR.status==200)mostraHistorico()
+         }
+
+         // Monta a lista dos últimos posts
+         function mostraHistorico(){
+            var xmlDoc=XHR.responseXML
+            var item=xmlDoc.getElementsByTagName("item")
+            for(i=0;i<item.length;i++){
+               var link=item[i].getElementsByTagName("link")[0].firstChild.nodeValue
+               var titulo=item[i].getElementsByTagName("title")[0].firstChild.nodeValue.replace(/\s\-\sAutor\(.*\)$/,"")
+               if(titulo=="")titulo="Sem título"
+
+               var data=item[i].getElementsByTagName("pubDate")[0].firstChild.nodeValue
+               var er=/([a-z]{3}), ([0-9]{2}) ([a-z]{3}) ([0-9]{4}) ([0-9]{2}\:[0-9]{2}\:[0-9]{2}) -[0-9]{4}/i
+               data=data.match(er)
+               var mes
+               switch(data[3]){
+                  case'Jan':mes='01';break
+                  case'Feb':mes='02';break
+                  case'Mar':mes='03';break
+                  case'Apr':mes='04';break
+                  case'May':mes='05';break
+                  case'Jun':mes='06';break
+                  case'Jul':mes='07';break
+                  case'Aug':mes='08';break
+                  case'Sep':mes='09';break
+                  case'Oct':mes='10';break
+                  case'Nov':mes='11';break
+                  case'Dec':mes='12';break
+               }
+               
+      
+      
+            }
+         }
+
+
+      function move(box,tit,show){
+         var li = document.getElementById(box);
+
+         var base = document.getElementById('position'+box);
+
+         lnk0 = li.getElementsByTagName('a')[0];
+         url2 = escape(''+box+'');     
+         lnk0.setAttribute('href','http://del.icio.us/post?v=4;url='+url2+'&title='+tit+'');
+
+         lnk1 = li.getElementsByTagName('a')[1];
+         lnk1.setAttribute('href','http://digg.com/submit?phase=2&url='+url2+'&title='+tit+'');       
+
+         lnk2 = li.getElementsByTagName('a')[2];
+         lnk2.setAttribute('href','http://google.com/bookmarks/mark?op=edit&bkmk='+url2+'&title='+tit+'');
+         
+         lnk4 = li.getElementsByTagName('a')[3];
+         lnk4.setAttribute('href','http://stumbleupon.com/submit?url='+url2+'&title='+tit+'');        
+
+         lnk5 = li.getElementsByTagName('a')[4];
+         lnk5.setAttribute('href','http://technorati.com/faves?add='+url2+'');            
+         
+         if (navigator.appName == 'Microsoft Internet Explorer'){
+            numLeft = parseInt(base.offsetLeft) - 90 + 'px';
+            numTop = parseInt(base.offsetTop) + 30 + 'px';
+         }else{ 
+            numLeft = parseInt(base.offsetLeft) + 29 + 'px';
+            numTop = parseInt(base.offsetTop) + 10 + 'px';
+         }  
+         li.style.top = numTop;
+         li.style.left = numLeft;
+         
+         showDiv(box,show);
+         
+      }
+
+      function showDiv(url,app){
+         var li = document.getElementById(url);
+         li.style.display = app; 
+      }
+
+
+      function menu_r(elem) {
+         if(elem.id === "bt_fechar") {
+            document.body.className = document.body.className.replace(/ ?menuOpen/g,'');
+         } else {
+            document.body.className += ' menuOpen';
+         }
+         return false;
+      };
+
+
+         //]]>
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20179088-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+   </head>
+   <body id="bBlog" class="" style="margin-top:15px">
+      <div class="centraliza">
+         <!--barras-->
+         <div id="main">
+         	<script>writeUolBar();</script>
+            <div id="header">
+               <h1><a href="/" title="Blog Jogosdaqui">Jogosdaqui</a></h1>
+            </div>
+            <div id="content">
+               <div id="coluna-esquerda">
+                  <div class="box" style="padding:0;height:79px;width:156px;border: 0;padding:1px;">
+						<a href="http://twitter.com/jogosdaqui/" target="_blank">
+							<img src="http://blog.i.uol.com.br/jogosdaqui/twitter.gif" style="margin-top:2px;margin-left:2px;"/>
+						</a>
+				  </div>
+				  
+				  <div class="box" style="padding:0;height:79px;width:156px;border: 0;padding:1px;">
+						<a href="mailto:jogosdaqui@uol.com.br?subject=jogosdaqui" target="_blank">
+							<img src="http://blog.i.uol.com.br/jogosdaqui/selo-email.jpg" style="margin-top:2px;margin-left:2px;"/>
+						</a>
+				  </div>
+				  <div class="box" style="padding:0;height:79px;width:156px;border: 0;padding:1px;">
+						<a href="http://skahal.com/pt/ships-n-battles/" target="_blank">
+							<img src="http://jogosdaqui.sites.uol.com.br/blog/Imagens/banner3.png" style="margin-top:2px;margin-left:2px;"/>
+						</a>
+				  </div>
+                  <div class="ferramentas box">
+                     <ul>
+                        <li class="rss"><a href="http://jogosdaqui.rssblog.uol.com.br/">RSS</a></li>
+                        <li class="indique"><a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892" onclick="popup(event, 'popup', 0)">Indique este blog</a></li>
+                        <li class="celular"><a href="http://celular.uol.com.br/wapsite/interacao.jhtm">Leia no celular</a></li>
+                        <li class="selo"><a href="http://blog.uol.com.br" target="_blank"><img src="http://es.i.uol.com.br/blogs/lancelloti/uol-blog.jpg"></a></li>
+                     </ul>
+                  </div>
+<!--Anúncio UOL -->
+<script type='text/javascript'>
+<!--
+uolxmlshopping='73|0|160|600|110563|60485'; uolxmlshoppingid='A1398527254'; uolxmlshoppingbusca='video game,games,consoles';
+-->
+</script>
+<script type='text/javascript' src='http://adrequisitor-af.shopping.uol.com.br/xmluol.js' id='A1398527254'></script>
+<!--Anúncio UOL -->
+               </div><!--//coluna-esquerda-->
+               
+               <div id="conteudo-central">
+                  
+                  
+                     
+                        <div class="postagem">
+                           <a name="2010_12-31_11_17_23-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('31/12/2010'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              Os fatos do ano
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><p>&nbsp;</p><p>Perguntamos aos nossos leitores: <strong><em>"Em 2010, quais foram os fatos mais relevantes em rela&ccedil;&atilde;o a ind&uacute;stria de desenvolvimento de games no Brasil?"</em></strong>.</p><p>As respostas foram variadas, confira:</p><p>&nbsp;</p><p><strong>Jogo Justo</strong></p><p><strong><img src="http://jogosdaqui.blog.uol.com.br/images/jogojusto.png" alt="" /><br /></strong></p><p>Projeto que pretende diminuir os impostos aplicados sobre os video games e relacionados.&nbsp;</p><p>Com o passar dos meses acabou aumentando sua amplitude de a&ccedil;&atilde;o e deve trazer boas novidades para o ano que vem.</p><p><a href="http://www.jogojusto.com.br/" target="_blank">Site oficial</a></p><p><a href="http://jogos.uol.com.br/ultnot/multi/2010/07/14/ult530u7924.jhtm" target="_blank">UOL Jogos -&nbsp;Projeto visa reduzir imposto de games de 80% para 15%</a></p><p>&nbsp;</p><p><strong>Eventos de games</strong></p><p><img src="http://jogosdaqui.blog.uol.com.br/images/bgs.jpeg" alt="" /></p><p>Neste ano tivemos diversos eventos sobre games no pa&iacute;s, entre eles destaca-se o Brasil Game Show, que bateu recordes de p&uacute;blico.</p><p>A edi&ccedil;&atilde;o de 2011 est&aacute; agendada para outubro e deve dobrar de tamanho e receber at&eacute; 40 mil visitantes.</p><p><a href="http://www.brasilgameshow.com.br/" target="_blank">Site oficial</a></p><p><a href="http://jogos.uol.com.br/ultnot/multi/2010/11/21/ult530u8707.jhtm" target="_blank">UOL Jogos - Com "Mortal Kombat" e jogos de dan&ccedil;a, Brasil Game Show movimenta RJ</a></p><p>&nbsp;</p><p><strong>Mudan&ccedil;a de estrat&eacute;gia para o Zeebo</strong></p><p><img src="http://jogosdaqui.blog.uol.com.br/images/zeebo.jpg" alt="" /></p><p>Neste ano o Zeebo mudou seu foco: entretenimento para toda a fam&iacute;lia, acesso a internet atrav&eacute;s de sua rede 3G, novo teclado e parcerias com Disney e Maur&iacute;cio de Souza Produ&ccedil;&otilde;es.</p><p><a href="http://www.zeebo.com.br/" target="_blank">Site oficial</a></p><p><a href="http://jogos.uol.com.br/playstation3/ultnot/2010/09/01/ult530u8154.jhtm" target="_blank">UOL Jogos -&nbsp;Com nova filosofia, Zeebo ganha acesso &agrave; internet, jogos da Disney e Turma da M&ocirc;nica</a></p><p>&nbsp;</p><p><strong>Jogos para iPhone/iPod/iPad</strong></p><p><strong><img src="http://jogosdaqui.blog.uol.com.br/images/iphone.png" alt="" /><br /></strong></p><p>Durante o ano foi poss&iacute;vel apreciar diversos lan&ccedil;amentos de games brasileiros para as plataformas da Apple, como:</p><p><a href="http://www.mylumaki.com/" target="_blank">Lumaki</a>, <a href="http://ovnistudios.com/dodgeballsafari" target="_blank">Dodgeball Safari</a>, <a href="http://www.thegravediggergame.com/" target="_blank">The Gravedigger</a>&nbsp;e&nbsp;<a href="http://www.julesunboxingtheworld.com/" target="_blank">Jules Unboxing the World</a>.</p><p><a href="http://jogos.uol.com.br/album/jogos_brasileiros_iphone_album.jhtm" target="_blank">UOL Jogos -&nbsp;Jogos brasileiros para iPhone</a></p><p>&nbsp;</p><p><strong>Freekscape: Escape From Hell</strong></p><p><img src="http://jogosdaqui.blog.uol.com.br/images/freekscape-2.JPG" alt="" width="320" height="180" /></p><p>Al&eacute;m de ter sido mencionado como um dos games brasileiros mais jogados, Freekscape tamb&eacute;m entrou na lista de fatos do ano, pois foi o primeiro, e at&eacute; o momento o &uacute;nico, game brasileiro para PSP.</p><p><a href="http://www.freekscape.com/" target="_blank">Site oficial</a></p><p>&nbsp;</p><p><strong>PS3 lan&ccedil;ado oficialmente no Brasil</strong></p><p><strong><img src="http://jogosdaqui.blog.uol.com.br/images/playstation3.jpg" alt="" /><br /></strong></p><p>Depois de anos de vida, o PS3 &eacute; lan&ccedil;ado oficialmente pela Sony no Brasil.</p><p><a href="http://jogos.uol.com.br/playstation3/ultnot/2010/08/11/ult4100u1790.jhtm" target="_blank">UOL Jogos -&nbsp;Por R$ 1.999, Sony Style come&ccedil;a a vender PS3 no Brasil</a></p><p>&nbsp;</p><p><strong>Double Jump</strong></p><p><img src="http://jogosdaqui.blog.uol.com.br/images/doublejump.png" alt="" /></p><p>Desenvolvedores brasileiros de games, que atuam na ind&uacute;stria, falando sobre games, produ&ccedil;&atilde;o e mercado.</p><p>Al&eacute;m do blog, existe o podcast, onde discutem mais profundamente assuntos relacionados a ind&uacute;stria.</p><p><a href="http://www.doublejump.com.br" target="_blank">Site oficial</a></p><p>&nbsp;</p><p><strong>Novos est&uacute;dios</strong></p><p><img src="http://jogosdaqui.blog.uol.com.br/images/novosestudios.png" alt="" /></p><p>Novos est&uacute;dios surgiram por todos os cantos do pa&iacute;s e est&atilde;o produzindo e lan&ccedil;ando games para diversas plataformas.</p><p><a href="http://goo.gl/PymUK" target="_blank">Mapa com as empresas brasileiras de desenvolvimento de jogos</a></p><p>&nbsp;</p><p><strong>e-Games</strong></p><p><img src="http://jogosdaqui.blog.uol.com.br/images/egames.jpg" alt="" /></p><p>Concurso realizado pelo Senac para incentivar a cria&ccedil;&atilde;o de games no Brasil. A segunda edi&ccedil;&atilde;o do concurso obteve &oacute;timos resultados, tendo como vencedor o game Talbot's Odyssey do est&uacute;dio <a href="http://studiominiboss.blogspot.com/2010/11/talbots-odyssey-wins-senac-e-games-2010.html" target="_blank">MiniBoss</a>.</p><p><a href="http://www3.sp.senac.br/hotsites/gd2/egames/" target="_blank">Site oficial</a></p><p><a href="http://jogos.uol.com.br/ultnot/multi/2010/10/21/ult530u8485.jhtm" target="_blank">UOL Jogos - Senac abre concurso para premiar novos talentos em produ&ccedil;&atilde;o de jogos no Brasil</a></p><p><a href="http://www.doublejump.com.br/archives/1838" target="_blank">DoubleJump - E-Games 2010</a></p><p>&nbsp;</p><p><strong>Investida da Blizzard no Brasil</strong></p><p><strong><img src="http://jogosdaqui.blog.uol.com.br/images/blizzard.jpg" alt="" /><br /></strong></p><p>A Blizzard abriu um escrit&oacute;rio no pa&iacute;s e come&ccedil;ou suas opera&ccedil;&otilde;es com o lan&ccedil;amento de StarCraft II dublado em portugu&ecirc;s. O game foi lan&ccedil;ado com um evento para a imprensa e gamers.</p><p><a href="http://jogos.uol.com.br/pc/ultnot/2010/04/12/ult182u8357.jhtm" target="_blank">UOL Jogos - Blizzard prepara lan&ccedil;amento de "StarCraft II" no Brasil</a></p><p>&nbsp;</p><p><strong>Sa&iacute;da dos est&uacute;dios de desenvolvimento da Ubisoft do Brasil</strong></p><p>Em 2008 a Ubisoft inaugurou seu primeiro est&uacute;dio de desenvolvimento de jogos no Brasil, por&eacute;m em 2010 fechou todos os est&uacute;dios de desenvolvimento no Brasil, focando apenas na parte comercial.</p><p>2008:&nbsp;<a href="http://jogos.uol.com.br/reportagens/ultnot/2008/06/24/ult2240u128.jhtm">UOL Jogos -&nbsp;Ubisoft inaugura est&uacute;dio de produ&ccedil;&atilde;o de jogos no Brasil</a></p><p>2010:&nbsp;<a href="http://jogos.uol.com.br/ultnot/multi/2010/09/30/ult530u8344.jhtm" target="_blank">UOL Jogos -&nbsp;Ubisoft fechar&aacute; est&uacute;dios no Brasil at&eacute; fim do ano e foca em distribui&ccedil;&atilde;o e varejo</a></p><p>&nbsp;</p><p>StairLabs</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/stairslabs.png" alt="" /></p><p>O StairLabs promete dar uma ajuda para que criadores de games independentes consigam produzir e publicar seus games e transform&aacute;-los em produto.</p><p><a href="http://www.stairslabs.com.br" target="_blank">Site oficial</a></p><p>&nbsp;</p><p>Esses foram os fatos de 2010, segundo nossos leitores, para a ind&uacute;stria de desenvolvimento de jogos brasileira. Um grande ano, sem d&uacute;vida, mas que ficar&aacute; pequeno quando 2011 estiver terminando.</p><p>Esperamos que 2011 seja um ano ainda melhor para os games brasileiros.</p></div>
+         
+                           <p class="autor">Por: Equipe jogosdaqui (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2010_12-31_11_17_23-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=Os fatos do ano&du=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=Os fatos do ano&c=&u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0&title=Os fatos do ano" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2010_12-31_11_17_23-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2010_12-31_11_17_23-154784552-0"><script>commentText(7)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-31_11_17_23-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2010_12-27_09_50_34-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('27/12/2010'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              Lançamento de Dodgeball Safari
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><p>A Ovni Studios, conhecida pelo desenvolvimento de games como <a href="http://www.ovnistudios.com/colorrace" target="_blank">Fiat Uno Color Race</a> e <a href="http://www.ovnistudios.com/placarcup" target="_blank">Copa Placar</a>, tem um &oacute;timo motivo para comemorar nas festas de final de ano, pois acaba de lan&ccedil;ar o seu primeiro game pr&oacute;prio, com propriedade intelectual 100% do est&uacute;dio. Estamos falando do game <a href="http://www.ovnistudios.com/dodgeballsafari" target="_blank">Dodgeball Safari</a> para iPhone e iPod Touch.</p><p>&nbsp;</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/dodgeballCharsIlustration.png" alt="" /></p><p>&nbsp;</p><p>Dodgeball Safari &eacute; um jogo de queimada, onde os jogadores estar&atilde;o na pele nove diferentes animais de um safari, como o elefante Obina, o le&atilde;o Kali e a zebra Jovan. Existem cinco modos de jogo: arcade, survival, time trial, target mode e parry mode. Al&eacute;m disso, tamb&eacute;m possui achievements e uma rede social pr&oacute;pria.</p><p>&nbsp;</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/ring2.png" alt="" /></p><p>&nbsp;</p><p>Para quem gosta de transcender a experi&ecirc;ncia al&eacute;m da tela do mobile, pode baixar e imprimir os papertoys dos personagens do game.</p><p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="225" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=17389408&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" /><embed type="application/x-shockwave-flash" width="400" height="225" src="http://vimeo.com/moogaloop.swf?clip_id=17389408&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" allowscriptaccess="always" allowfullscreen="true"></embed></object></p><p>&nbsp;</p><p>O game est&aacute; dispon&iacute;vel na <a href="http://itunes.apple.com/app/dodgeball-safari/id410456099?mt=8" target="_blank">App Store em vers&atilde;o gratu&iacute;ta</a>, sendo que a vers&atilde;o completa pode ser comprada dentro do game.</p></div>
+         
+                           <p class="autor">Por: Equipe jogosdaqui (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2010_12-27_09_50_34-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=Lançamento de Dodgeball Safari&du=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=Lançamento de Dodgeball Safari&c=&u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0&title=Lançamento de Dodgeball Safari" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2010_12-27_09_50_34-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2010_12-27_09_50_34-154784552-0"><script>commentText(7)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-27_09_50_34-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2010_12-22_09_52_58-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('22/12/2010'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              Lançamento de Totem Destroyer Deluxe
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><p>Depois de lan&ccedil;ar a vers&atilde;o para Mac e Windows de <a href="http://jogosdaqui.blog.uol.com.br/arch2010-12-05_2010-12-11.html#2010_12-06_18_52_16-154784552-0" target="_self">Cargo Delivery</a>,&nbsp;&nbsp;a produtora brasileira Cats in the Sky lan&ccedil;a o game Totem Destroyer Deluxe, terceiro game da franquia Totem Destroyer.</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/TotemDestroyerDeluxe.jpg" alt="" /></p><p>Totem Destroyer Deluxe &eacute; um puzzle baseado em f&iacute;sica onde o&nbsp;jogador deve destruir os blocos dos totens, mantendo o &iacute;dolo de ouro intacto, mesmo estilo dos antecesores,&nbsp;<span style="font-family: verdana, Helvetica, sans-serif; font-size: 13px;"><a href="http://www.catsinthesky.com/games/totem-destroyer" target="_blank">Totem Destroyer</a> e <a href="http://www.catsinthesky.com/games/totem-destroyer-2" target="_blank">Totem Destroyer II</a>, por&eacute;m com novos recursos e contando com 50 n&iacute;veis.</span></p><p>&nbsp;</p><p>Totem Destroyer Deluxe (Mac e Windows) pode ser comprado diretamente no <a href="http://www.catsinthesky.com/store/" target="_blank">site da Cats in the Sky</a>.</p><div><span style="font-family: verdana, Helvetica, sans-serif; font-size: 13px;"><br /></span></div></div>
+         
+                           <p class="autor">Por: Equipe jogosdaqui (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2010_12-22_09_52_58-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=Lançamento de Totem Destroyer Deluxe&du=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=Lançamento de Totem Destroyer Deluxe&c=&u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0&title=Lançamento de Totem Destroyer Deluxe" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2010_12-22_09_52_58-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2010_12-22_09_52_58-154784552-0"><script>commentText(7)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-22_09_52_58-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2010_12-18_11_09_06-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('18/12/2010'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              Documentário "A Mecânica do Jogo"
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><p>"A Mec&acirc;nica do Jogo" mostra diversos aspectos sobre a ind&uacute;stria de desenvolvimento de games brasileira.</p><p>&nbsp;</p><p>O document&aacute;rio tem uma &oacute;tima qualidade e possui depoimentos de diversas pessoas da ind&uacute;stria brasileira falando sobre &nbsp;a cultura do brasileiro em rela&ccedil;&atilde;o ao games internacionais e nacionais, sobre as diferen&ccedil;as entre os mercados americano, europeu, japon&ecirc;s e o nosso, sobre os altos impostos e a pirataria, a sa&iacute;da da Ubisoft e muitos outros assuntos.</p><p>&nbsp;</p><p>De quebra voc&ecirc; poder&aacute; conferir algumas cenas de games nacionais, como: Taikodom, Cave Days, Freekscape e Incidente em Varginha.</p><p>Confira abaixo o document&aacute;rio, vale cada segundo.</p><p>&nbsp;</p><p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/r8NKhmX-27Y?fs=1&amp;hl=en_US" /><embed type="application/x-shockwave-flash" width="480" height="385" src="http://www.youtube.com/v/r8NKhmX-27Y?fs=1&amp;hl=en_US" allowscriptaccess="always" allowfullscreen="true"></embed></object></p></div>
+         
+                           <p class="autor">Por: Equipe jogosdaqui (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2010_12-18_11_09_06-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=Documentário "A Mecânica do Jogo"&du=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=Documentário "A Mecânica do Jogo"&c=&u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0&title=Documentário "A Mecânica do Jogo"" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2010_12-18_11_09_06-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2010_12-18_11_09_06-154784552-0"><script>commentText(7)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-18_11_09_06-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2010_12-17_10_24_36-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('17/12/2010'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              Em 2010, quais foram os fatos mais relevantes em relação a indústria de desenvolvimento de games no Brasil?
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><p><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica;">O jogosdaqui quer saber o que voc&ecirc; considera como os fatos de 2010 (games, produtoras, eventos, movimentos, etc) mais relevantes em rela&ccedil;&atilde;o a ind&uacute;stria de desenvolvimento de games no Brasil.</p><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px;">&nbsp;</p><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px;"><img src="http://jogosdaqui.blog.uol.com.br/images/Fatos2010.png" alt="" /></p><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px;">&nbsp;</p><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica;">Quando a enquete for finalizada, realizaremos um post sobre os fatos mais mencionados.</p><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px;">&nbsp;</p><p style="margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica;"><a href="http://goo.gl/bvomm" target="_blank">Enquete: Em 2010, quais foram os fatos mais relevantes em rela&ccedil;&atilde;o a ind&uacute;stria de desenvolvimento de games no Brasil?</a></p></p></div>
+         
+                           <p class="autor">Por: Equipe jogosdaqui (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2010_12-17_10_24_36-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=Em 2010, quais foram os fatos mais relevantes em relação a indústria de desenvolvimento de games no Brasil?&du=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=Em 2010, quais foram os fatos mais relevantes em relação a indústria de desenvolvimento de games no Brasil?&c=&u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0&title=Em 2010, quais foram os fatos mais relevantes em relação a indústria de desenvolvimento de games no Brasil?" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2010_12-17_10_24_36-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2010_12-17_10_24_36-154784552-0"><script>commentText(7)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-17_10_24_36-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2010_12-13_10_50_33-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('13/12/2010'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              Resultado da enquete "Quais games desenvolvidos no Brasil você já jogou?"
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><p>N&oacute;s, do jogosdaqui, conhecemos por volta de 200 games produzidos por empresas ou equipes indies brasileiras, mesmo conhecendo tantos games nacionais, sab&iacute;amos que existia muito mais por ai. O resultado da enquete&nbsp;"Quais games desenvolvidos no Brasil voc&ecirc; j&aacute; jogou?" comprovou nosso pensamento, pois ao final da enquete, temos a cita&ccedil;&atilde;o de 53 games diferentes, sendo que alguns ainda eram desconhecidos para n&oacute;s.</p><p>&nbsp;</p><p>Alguns games citados, apesar de serem desenvolvidos no Brasil e por brasileiros, n&atilde;o eram games produzidos por empresas de origem nacional. Esses games foram desconsiderados, por uma simples raz&atilde;o: por serem de empresas estrangeiras e famosas, seus games j&aacute; ganham aten&ccedil;&atilde;o suficiente na m&iacute;dia especializada, tanto nos outros pa&iacute;ses quanto aqui. Vale salientar que consideramos extremamente v&aacute;lido a vinda de empresas estrangeiras de desenvolvimento de jogos para o Brasil, pois sabemos que a troca de experi&ecirc;ncia entre essas empresas e as empresas locais, al&eacute;m da troca com os meios acad&ecirc;micos, sempre criam uma sinergia que traz benef&iacute;cio ao mercado de games.</p><p>&nbsp;</p><p>Dentre os games mais citados, est&atilde;o:</p><p><strong>Taikodom da Hoplon Infotainment</strong></p><p>Provavelmente o maior game (em tempo de desenvolvimento e or&ccedil;amento) j&aacute; produzido no Brasil.</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/Taikodom.jpg" alt="" /></p><p><br /><strong>Outlive da&nbsp;Continuum Entertainment</strong></p><p>A empresa n&atilde;o existe mais e o game j&aacute; tem 10 anos, mesmo assim continua vivo na mem&oacute;ria dos jogadores brasilieros.</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/5680-shot06.jpg" alt="" /></p><p><a href="http://www.continuum.com.br/" target="_blank"></a><br /><strong>Freekscape: Escape from Hell da Kidguru Studios</strong></p><p>O primeiro game brasileiro lan&ccedil;ado na PSN cativou os jogadores com seu her&oacute;i carism&aacute;tico e level design inteligente. Se voc&ecirc; tem um PSP ou um PS3 (mini) esse &eacute; um game obrigat&oacute;rio.</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/freekscape-2.JPG" alt="" /></p><p>&nbsp;</p><p><strong>Erinia da Ignis Games</strong></p><p>O primeiro MMORPG brasileiro continua vivo gra&ccedil;as a comunidade de jogadores que ainda mant&eacute;m servidores do jogo.</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/erinia_1.jpg" alt="" /></p><p>&nbsp;</p><p><strong>Jules: Unboxing the World da Sulistas</strong></p><p>Com um personagem t&atilde;o original e extrema qualidade t&eacute;cnica, Jules faz bonito no iPad (deve ganhar uma vers&atilde;o para iPhone).</p><p><img src="http://jogosdaqui.blog.uol.com.br/images/mzl.fdiakprk.480x480-75.jpg" alt="" /></p><p>&nbsp;</p><p>As empresas com mais jogos citados foram:&nbsp;<a href="http://www.aquiris.com.br/pt/home/" target="_blank">Aquiris Game Experience</a>, <a href="http://www.insolitastudios.com/pt/default.asp" target="_blank">Insolita Studios</a>,&nbsp;<a href="http://www.jynxplayware.com.br/" target="_blank">Jynx Playware</a>,&nbsp;<a href="http://pt.wikipedia.org/wiki/Southlogic" target="_blank">Southlogic Studios</a>, <a href="http://www.greenlandstudios.com/" target="_blank">Green Land Studios</a>, <a href="http://www.invent4.com/index-p.htm" target="_blank">Invent4</a>, <a href="http://www.kidgurustudios.com/" target="_blank">KidGuru Studios</a> e <a href="http://www.webcoregames.com.br/" target="_blank">Webcore Games</a>.</p><p>Abaixo a lista completa dos jogos citados, come&ccedil;ando pelos mais votados:</p><p>&nbsp;</p><ol><li style="list-style-type:decimal"><a href="http://www.taikodom.com.br/" target="_blank">Taikodom da Hoplon Infotainment</a></li><br /><li style="list-style-type:decimal"><a href="http://www.continuum.com.br/" target="_blank">Outilive da Continnum Entertainment</a></li><br /><li style="list-style-type:decimal"><a href="http://www.freekscape.com/" target="_blank">Freekscape: Escape from Hell da KidGuru Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://erinia.com.br/" target="_blank">Erinia da Ignis da Games</a></li><br /><li style="list-style-type:decimal"><a href="http://www.julesunboxingtheworld.com/" target="_blank">Jules: Ungoxing the World da Sulistas</a></li><br /><li style="list-style-type:decimal"><a href="http://www.perceptum.com/indexp.htm" target="_blank">Incidente em Varginha da Perceptum</a></li><br /><li style="list-style-type:decimal"><a href="http://pt.wikipedia.org/wiki/Guimo" target="_blank">Guimo da Southlogic Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://www.atari.com/games/deer_hunter_tournament" target="_blank">Deer Hunter Tournament da Southlogic Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://www.ovnistudios.com/pt/colorrace" target="_blank">Fiat Uno Color Race da Ovni Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://dueltoys.com/" target="_blank">Duel Toys 2 de Diefox</a></li><br /><li style="list-style-type:decimal"><a href="http://capoeiralegends.com.br/" target="_blank">Capoeira Legends da Donsoft Entertainment</a></li><br /><li style="list-style-type:decimal"><a href="http://www.botzin.net" target="_blank">Botzin da Green Land Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://www.cavedays.net/" target="_blank">Cavedays da Insolita Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://www.invent4.com/razor2/index-p.htm" target="_blank">Razor2: Hidden Skies da Invent4</a></li><br /><li style="list-style-type:decimal"><a href="http://pt.wikipedia.org/wiki/FutSim" target="_blank">FutSim da Jynx Playware</a></li><br /><li style="list-style-type:decimal"><a href="http://www.mylumaki.com/" target="_blank">Lumaki da KidGuru Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://pt.wikipedia.org/wiki/Deer_Hunter_2005" target="_blank">Deer Hunter 2005 da Southlogic Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://www.baixaki.com.br/download/tensao-abaixo-de-zero.htm" target="_blank">Tens&atilde;o abaixo de zero de Andr&eacute; C&eacute;sar Medeiros e Glauber Kotaki Rodrigues</a></li><br /><li style="list-style-type:decimal"><a href="http://www.cartoonnetwork.com/games/generatorrex/abysusarena/" target="_blank">Generator Rex - Abysus Arena da Aquiris Game Experience</a></li><br /><li style="list-style-type:decimal"><a href="http://www.aquiris.com.br/pt/games/detalhes/index.php?id=36" target="_blank">Desafio Pequim da Aquiris Game Experience</a></li><br /><li style="list-style-type:decimal"><a href="http://www.aquiris.com.br/pt/games/detalhes/index.php?id=2" target="_blank">Super Volei Brasil 1 da Aquiris Game Experience</a></li><br /><li style="list-style-type:decimal"><a href="http://www.aquiris.com.br/pt/games/detalhes/index.php?id=1" target="_blank">Super Volei Brasil 2 da Aquiris Game Experience</a></li><br /><li style="list-style-type:decimal"><a href="http://www.attackpinball.net/" target="_blank">Undead Attac da Attack Pinball Team</a><span style="white-space: pre;">&nbsp;</span></li><br /><li style="list-style-type:decimal"><a href="http://www.brasfoot.com/" target="_blank">Brasfoot da Brasfoot.com</a></li><br /><li style="list-style-type:decimal"><a href="http://bulletsofarevolver.blogspot.com/" target="_blank">Balas de um revolver de Diefox</a></li><br /><li style="list-style-type:decimal"><a href="http://www.domino-box.com/br/" target="_blank">Domino Box da Domino Box</a></li><br /><li style="list-style-type:decimal"><a href="http://www.espacoinf.com/hade.html" target="_blank">Hades 2 da Espa&ccedil;o Inform&aacute;tica</a></li><br /><li style="list-style-type:decimal"><a href="http://www.flickgol.com/" target="_blank">FlickGol da FingerTips</a></li><br /><li style="list-style-type:decimal"><a href="http://www.graffitientertainment.com/index.php/games/hightechracing" target="_blank">HTR : High Tech Racing da Graffiti Entertainment</a></li><br /><li style="list-style-type:decimal"><a href="http://pt.wikipedia.org/wiki/Vampiromania" target="_blank">Vampiromania da Green Land Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://store.steampowered.com/app/33680/" target="_blank">Eversion de Guilherme S. Tows</a></li><br /><li style="list-style-type:decimal"><a href="http://www.icongames.com.br/fruzzle-pt.htm" target="_blank">Fruzzle da Icon Games</a></li><br /><li style="list-style-type:decimal"><a href="http://www.ilhadoempreendedor.com.br/" target="_blank">Ilha do Empreendedor da Insolita Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://www.ludopark.com.br/" target="_blank">Ludo Park da Insolita Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://www.ludopark.com.br/" target="_blank"></a>Ottomax da Insolita Studios</li><br /><li style="list-style-type:decimal"><a href="http://www.invent4.com/rats/">Bad Rats - The Rat's Revenge da Invent4</a></li><br /><li style="list-style-type:decimal"><a href="http://maisdiversao.fanta.com.br/figurinhas/#/-jogo" target="_blank">Fanta Crew da Jynx Playware</a></li><br /><li style="list-style-type:decimal"><a href="http://www.notdoppler.com/kokimi.php" target="_blank">Kokimi da Jynx Playware</a></li><br /><li style="list-style-type:decimal"><a href="http://www.notdoppler.com/kokimi.php" target="_blank"></a>Restaurant Manager da Jynx Playware</li><br /><li style="list-style-type:decimal"><a href="http://www.livetouch.com.br/Templates/portfolio_RiR.html" target="_blank">Run in Rio da Livetouch</a></li><br /><li style="list-style-type:decimal"><a href="http://studiominiboss.blogspot.com/" target="_blank">Talbot's Odissey da MiniBoss</a></li><br /><li style="list-style-type:decimal"><a href="http://www.mothergaia.com.br/portugues/cityrain.php" target="_blank">City Rain da Mother Gaia Studio</a></li><br /><li style="list-style-type:decimal"><a href="http://www.musigames.com/imusic-puzzle.html" target="_blank">iMusic Puzzle da MusiGames</a></li><br /><li style="list-style-type:decimal"><a href="http://sites.google.com/site/nologygames/koko-arena" target="_blank">Koko Arena da Nology</a></li><br /><li style="list-style-type:decimal"><a href="http://www.ovnistudios.com/pt/placarcup" target="_blank">Copa Placar da Ovni Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://pt.wikipedia.org/wiki/Deer_Hunter_2004" target="_blank">Deer Hunter 2004 da Southlogic Studios</a></li><br /><li style="list-style-type:decimal"><a href="http://pt.wikipedia.org/wiki/M&ocirc;nica_no_Castelo_do_Drag&atilde;o " target="_blank">Monica no castelo do Drag&atilde;o da Tec Toy</a></li><br /><li style="list-style-type:decimal"><a href="http://www.thevelopers.webs.com/" target="_blank">Freakin' Color da The Velopers</a></li><br /><li style="list-style-type:decimal"><a href="http://www.indiepubgames.com/game/Painting_Rage" target="_blank">Painting Rage de Vin&iacute;cius Cana&atilde; Medeiros Ruela e Luca Mattos M&ouml;ller</a></li><br /><li style="list-style-type:decimal"><a href="http://www.webcore.com.br/portfolio/detalhes.php/surfinia" target="_blank">Surfini da Webcore</a></li><br /><li style="list-style-type:decimal"><a href="http://lasthopegame.wordpress.com/" target="_blank">Last Hope da Yellow Jam</a></li><br /><li style="list-style-type:decimal"><a href="http://www.webcoregames.com.br/case/gamefutebol_redeglobo.html" target="_blank">Game Futebol da Webcore</a></li><br /><li style="list-style-type:decimal"><a href="http://www.edesiopereira.com.br/jogos/lemonworld.htm " target="_blank">Lemon World de Alonso, Ed&eacute;sio P. Souza e Levi</a></li><br /> </ol><p>&nbsp;</p><p>Pretendemos realizar um post para a maioria dos jogos citados, de tempos em tempos voc&ecirc; poder&aacute; confer&iacute;-los aqui, no Blog jogosdaqui.</p><p>&nbsp;</p></div>
+         
+                           <p class="autor">Por: Equipe jogosdaqui (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2010_12-13_10_50_33-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=Resultado da enquete "Quais games desenvolvidos no Brasil você já jogou?"&du=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=Resultado da enquete "Quais games desenvolvidos no Brasil você já jogou?"&c=&u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0&title=Resultado da enquete "Quais games desenvolvidos no Brasil você já jogou?"" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2010_12-13_10_50_33-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2010_12-13_10_50_33-154784552-0"><script>commentText(7)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-13_10_50_33-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2010_12-06_18_52_16-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('06/12/2010'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              Trailer de lançamento de Cargo Delivery
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><p>O est&uacute;dio Cats in the Sky liberou o trailer de lan&ccedil;amento do game Cargo Delivery.</p><p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="640" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="src" value="http://www.youtube.com/v/2v52gvR2KB0?version=3" /><embed type="application/x-shockwave-flash" width="640" height="385" src="http://www.youtube.com/v/2v52gvR2KB0?version=3" allowscriptaccess="always" allowfullscreen="true"></embed></object></p><p>Cargo Delivery &eacute; um puzzle baseado em f&iacute;sica onde o jogador, na pele de Rufus, deve enfrentar o mar e seus&nbsp;intemp&eacute;ries para levar sua embarca&ccedil;&atilde;o, lotada de cargas, at&eacute; o seu destino.</p><p>&nbsp;</p><p>Al&eacute;m da jogabilidade divertida e bem formulada, o jogo tamb&eacute;m apresenta uma dire&ccedil;&atilde;o de arte primorosa, que ajuda a fortalecer o estilo pr&oacute;prio do jogo na mente do jogador.</p><p>&nbsp;</p><p>As primeiras plataformas a receberem o game, no dia 14 de dezembro, devem ser Windows e Mac. O est&uacute;dio j&aacute; mencionou que uma vers&atilde;o para os dispositivos port&aacute;teis da Apple tamb&eacute;m deve ser lan&ccedil;ada</p><p>&nbsp;</p><p>Ficou curioso sobre o jogo? Existe uma demo online dispon&iacute;vel neste <a href="http://goo.gl/liTd9" target="_blank">endere&ccedil;o: <font face="arial, sans-serif" size="2"><span style="border-collapse: collapse; line-height: 19px; white-space: nowrap;">http://goo.gl/liTd9</span></font></a></p><p>&nbsp;</p></div>
+         
+                           <p class="autor">Por: Equipe jogosdaqui (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2010_12-06_18_52_16-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=Trailer de lançamento de Cargo Delivery&du=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=Trailer de lançamento de Cargo Delivery&c=&u=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0&title=Trailer de lançamento de Cargo Delivery" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2010_12-06_18_52_16-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2010_12-06_18_52_16-154784552-0"><script>commentText(7)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2010-12-01_2010-12-31.html#2010_12-06_18_52_16-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                  
+                  
+               </div><!--//conteudo-central-->
+               
+               <div id="coluna-direita">
+					<a style="display:block;margin:0 0 15px;" href="http://jogos.uol.com.br/" title="Ir para UOL - Jogos" target="_blank">
+                     <img width="157" src="http://blog.i.uol.com.br/jogosdaqui/selo-uol-jogos.jpg" alt="Ir para UOL - Jogos" />
+                  </a>
+				
+                  <div class="box">
+                     <h2>Sobre o blog</h2>
+                     <p>
+                     O jogosdaqui tem como missão proporcionar aos jogadores brasileiros um contato direto com os jogos produzidos por empresas nacionais. Nasceu da necessidade de um canal de comunicação entre os jogadores brasileiros e as empresas brasileiras de desenvolvimento de jogos. Nesse blog pretendemos trazer ao público um meio comum para notícias, análises, previews e making ofs  sobre os jogos produzidos aqui, por isso os games brasileiros serão sempre o destaque no jogosdaqui.
+                     </p>
+                  </div>
+                  
+                  <div class="historico box">
+                     <h2>Histórico</h2>
+                     
+                     
+                     <ul id="periodos-lateral"><script type="text/javascript">montaPeriodos();</script></ul>
+                     <div id="vejaMais"><a id="m" href="/listArchive.html">+ veja mais</a></div>
+                     
+                  </div>              
+
+               </div><!--//coluna-direita-->
+                                       
+               <div id="footer">
+                  <div class="dente"><!--//--></div>
+                  <p class="topo"><a href="#">Ir para o topo</a></p>
+               </div>
+               
+            </div><!--//content-->
+         </div>
+         <script type="text/javascript">writeUOLBar();</script>
+         <script>
+            // CORRIGE TWITTER
+            li = document.getElementsByTagName("li");
+   
+            for (i=0; i<li.length;i++){
+               if (li[i].className.indexOf("twitter")!=-1) {
+                  li[i].innerHTML = li[i].innerHTML.replace("#","%23");
+               }
+            }
+         
+         
+            // Variaveis de configuracao
+         
+            // Fim da configuracao 
+
+
+            /* NAO ALTERAR DAQUI PARA BAIXO, apenas remova os comentarios se precisar.
+            A linha abaixo deve obrigatoriamente ficar fora da função o valor de 
+            "DErand" nao pode ser diferente para os banners de uma mesma pagina */
+            d=document; var DEt=new Date(); DEt=DEt.getTime(); DErand=Math.floor(DEt*1000*Math.random());
+
+            // Verifica resolucao de tela
+            var scw=0,sch=0; if(screen.height){scw=screen.width;sch=screen.height;}
+
+            // Funcao que exibe o banner
+            function DEshow(ad,pos){
+            // Verifica tipo de conexao do usuario
+            var DEconn=d.body; DEconn.style.behavior='url(#default#clientCaps)'; DEconn=(DEconn.connectionType=='lan')?1:0;
+            d.write('<scr'+'ipt language="JavaScript1.1" src="http://bn.uol.com.br/js.ng/site=par&chan='+DEchan+'&subchan='+DEsubc+'&affiliate='+DEaff+'&size='+ad+'&page='+pos+'&conntype='+DEconn+'&expble='+Expble+'&reso='+scw+'x'+sch+'&cmpng='+DEcmpng+'&group='+DEGroup+'&tile='+DErand+'?"></scr'+'ipt>');
+            }
+            
+         </script>
+         
+         
+      </div>
+         
+      </div><!--//centraliza-->  
+      <script src="arch2010-12-01_2010-12-31.js"></script>
+
+<div id="uol-host">&copy; 1996-2010 UOL - O melhor conteúdo. Todos os direitos reservados.<br><a target="_blank" href="http://www.uolhost.com.br/hospedagem-de-sites.html">Hospedagem</a>: <a target="_blank" href="http://www.uolhost.com.br/">UOL Host</a></div>
+
+<!-- SiteCatalyst code version: H.19.3. Copyright 1997-2009 Omniture, Inc. More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="http://me.jsuol.com/omtr/jogos.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+var omni_blogtitle="jogosdaqui".toLowerCase();
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+uol_sc.channel="Jogos";
+uol_sc.hier1="Jogos:blogs:"+omni_blogtitle;
+uol_sc.prop1="Jogos-blogs";
+uol_sc.prop2="Jogos-blogs-"+omni_blogtitle;
+uol_sc.prop3="Jogos-blogs-"+omni_blogtitle;
+var s_code=uol_sc.t();if(s_code)document.write(s_code)//--></script>
+<!-- End SiteCatalyst code version: H.19.3. -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

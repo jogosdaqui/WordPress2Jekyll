@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+          <link rel="canonical" href="http://jogosdaqui.com.br">
+<!-- HTML meta refresh URL redirection -->
+   <meta http-equiv="refresh" 
+   content="0; url=http://jogosdaqui.com.br"/>
+
+	  <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+	  <meta http-equiv="Content-Language" content="pt-br" />
+	  <link type="text/css" rel="stylesheet" href="http://www3.uol.com.br/interacao/blog/jogos-daqui/styles.css" />
+	  <link type="image/x-icon" rel="shortcut icon" href="http://jogosdaqui.sites.uol.com.br/blog/images/favicon.ico" />
+	  <link rel="apple-touch-icon" href="http://home.img.uol.com.br/icon-touch.png" />
+	  <title>Blog jogosdaqui -  Tudo sobre os games desenvolvidos no Brasil</title>
+	  <script type="text/javascript" src="http://barra.uol.com.br/b/scripts/1024/bv1.js?refbusca="></script>
+	  <script type="text/javascript" src="http://lib.uol.com.br/uollib.ajax/uollib.ajax.js"></script>
+	  <script type="text/javascript" src="http://www3.uol.com.br/interacao/blog/jogos-daqui/functions.js"></script>
+	  <script type="text/javascript">document.domain = "uol.com.br";</script>
+		<script>
+         
+         //<![CDATA[
+
+         // Declaração das variáveis
+         d=document
+         var periodoMesAtual=""
+         var periodoAnoAtual=""
+         var k=0
+         var j=0
+         var periodo= new Array()
+         var periodoURL= new Array()
+         var comm = "Comente";
+         var url
+         var XHR = false
+
+      
+         periodo[k++]="01/03/2015 a 31/03/2015"
+         periodoURL[j++]="arch2015-03-01_2015-03-31.html"
+         periodo[k++]="01/11/2014 a 30/11/2014"
+         periodoURL[j++]="arch2014-11-01_2014-11-30.html"
+         periodo[k++]="01/06/2014 a 30/06/2014"
+         periodoURL[j++]="arch2014-06-01_2014-06-30.html"
+         periodo[k++]="01/05/2014 a 31/05/2014"
+         periodoURL[j++]="arch2014-05-01_2014-05-31.html"
+         periodo[k++]="01/04/2014 a 30/04/2014"
+         periodoURL[j++]="arch2014-04-01_2014-04-30.html"
+         periodo[k++]="01/06/2013 a 30/06/2013"
+         periodoURL[j++]="arch2013-06-01_2013-06-30.html"
+         periodo[k++]="01/05/2013 a 31/05/2013"
+         periodoURL[j++]="arch2013-05-01_2013-05-31.html"
+         periodo[k++]="01/04/2013 a 30/04/2013"
+         periodoURL[j++]="arch2013-04-01_2013-04-30.html"
+         periodo[k++]="01/03/2013 a 31/03/2013"
+         periodoURL[j++]="arch2013-03-01_2013-03-31.html"
+         periodo[k++]="01/02/2013 a 28/02/2013"
+         periodoURL[j++]="arch2013-02-01_2013-02-28.html"
+         periodo[k++]="01/01/2013 a 31/01/2013"
+         periodoURL[j++]="arch2013-01-01_2013-01-31.html"
+         periodo[k++]="01/12/2012 a 31/12/2012"
+         periodoURL[j++]="arch2012-12-01_2012-12-31.html"
+         periodo[k++]="01/11/2012 a 30/11/2012"
+         periodoURL[j++]="arch2012-11-01_2012-11-30.html"
+         periodo[k++]="01/10/2012 a 31/10/2012"
+         periodoURL[j++]="arch2012-10-01_2012-10-31.html"
+         periodo[k++]="01/08/2012 a 31/08/2012"
+         periodoURL[j++]="arch2012-08-01_2012-08-31.html"
+         periodo[k++]="01/07/2012 a 31/07/2012"
+         periodoURL[j++]="arch2012-07-01_2012-07-31.html"
+         periodo[k++]="01/06/2012 a 30/06/2012"
+         periodoURL[j++]="arch2012-06-01_2012-06-30.html"
+         periodo[k++]="01/04/2012 a 30/04/2012"
+         periodoURL[j++]="arch2012-04-01_2012-04-30.html"
+         periodo[k++]="01/02/2012 a 29/02/2012"
+         periodoURL[j++]="arch2012-02-01_2012-02-29.html"
+         periodo[k++]="01/01/2012 a 31/01/2012"
+         periodoURL[j++]="arch2012-01-01_2012-01-31.html"
+         periodo[k++]="01/10/2011 a 31/10/2011"
+         periodoURL[j++]="arch2011-10-01_2011-10-31.html"
+         periodo[k++]="01/09/2011 a 30/09/2011"
+         periodoURL[j++]="arch2011-09-01_2011-09-30.html"
+         periodo[k++]="01/05/2011 a 31/05/2011"
+         periodoURL[j++]="arch2011-05-01_2011-05-31.html"
+         periodo[k++]="01/04/2011 a 30/04/2011"
+         periodoURL[j++]="arch2011-04-01_2011-04-30.html"
+         periodo[k++]="01/03/2011 a 31/03/2011"
+         periodoURL[j++]="arch2011-03-01_2011-03-31.html"
+         periodo[k++]="01/02/2011 a 28/02/2011"
+         periodoURL[j++]="arch2011-02-01_2011-02-28.html"
+         periodo[k++]="01/01/2011 a 31/01/2011"
+         periodoURL[j++]="arch2011-01-01_2011-01-31.html"
+         periodo[k++]="01/12/2010 a 31/12/2010"
+         periodoURL[j++]="arch2010-12-01_2010-12-31.html"
+         periodo[k++]="01/11/2010 a 30/11/2010"
+         periodoURL[j++]="arch2010-11-01_2010-11-30.html"
+
+         function abre(url,w,h,scr){
+            window.open(url,'comentarios','width='+w+',height='+h+',directories=0,location=0,menubar=0,resizable=1,scrollbars='+scr+',status=0,toolbar=0,marginleft=0,margintop=0,left=25,top=25')
+         }
+
+         function commentText(qtd) {
+            txtFinal = "(<strong>"+qtd+"</strong>) "+comm;
+            return txtFinal;
+         }
+
+         // Acerta a altura das colunas dos meses para que não haja quebra de layout
+         function defineAlturaColunas(){
+            var arquivo=d.getElementById("calendario").getElementsByTagName("ul")
+            var maiorAltura=0
+            for(i=0;i<arquivo.length;i++){
+               ((arquivo[i].offsetHeight>maiorAltura)?maiorAltura=arquivo[i].offsetHeight:arquivo[i].style.height=maiorAltura)
+            }
+         }
+
+         // Define o nome do mês baseado pelo index
+         function defineMes(numMes){
+            numMes = parseInt(numMes, 10);
+            nomeMes= new Array("","Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
+            return nomeMes[numMes]
+         }
+
+         // Monta o calendário
+         function montaCalendario(){
+            for(i in periodo){
+               var periodoMes=periodo[i].substr(3,2) //Mes
+               var periodoAno=periodo[i].substr(6,4) //Ano
+
+               // Anos
+               if(periodoAnoAtual==""){
+                  d.write('<ol class="ano"><li><strong>'+periodoAno+"<\/strong><\/li>")
+                  periodoAnoAtual=periodoAno
+                  periodoMesAtual=""
+               }else if(periodoAno!=periodoAnoAtual){
+                  d.write('<\/ol><\/ol><ol class="ano"><li><strong>'+periodoAno+"<\/strong><\/li>")
+                  periodoAnoAtual=periodoAno
+                  periodoMesAtual=""
+               }
+
+               // Meses
+               if(periodoMesAtual==""){
+                  d.write('<ul class="mes"><li class="head"><span>'+defineMes(periodoMes)+"<\/span><\/li>")
+                  periodoMesAtual=periodoMes
+               }else if(periodoMes!=periodoMesAtual){
+                  d.write('<\/ul><ul class="mes"><li class="head"><span>'+defineMes(periodoMes)+"<\/span><\/li>")
+                  periodoMesAtual=periodoMes
+               }
+            
+               // Períodos
+               d.write('<li><a href="'+periodoURL[i]+'">'+periodo[i].replace(/\/20[0-9][0-9]/g,"")+"<\/a><\/li>")
+            }
+
+            // Fecha Calendário
+            d.write("<\/ol>")
+         }
+
+
+         // Monta os períodos do arquivo no box lateral
+         function montaPeriodos(){
+               if(periodo.length < 6){numMaximo=periodo.length}else{numMaximo = 5}
+               for(i=0;i<numMaximo;i++)d.write('<li><a id="m" href="'+periodoURL[i]+'">'+periodo[i]+"<\/a><\/li>")
+         }
+
+         // Request XML
+         function makeRequest(url){
+            XHR=false
+
+            if (window.XMLHttpRequest){
+               XHR= new XMLHttpRequest()
+               if(XHR.overrideMimeType)XHR.overrideMimeType('text/xml')
+            }else if(window.ActiveXObject){
+               try{
+                  XHR= new ActiveXObject("Msxml2.XMLHTTP")
+               }catch(e){
+                  try{
+                     XHR = new ActiveXObject("Microsoft.XMLHTTP")
+                  }catch(e){}
+               }
+            }
+
+            if(!XHR){
+               alert('Erro! :( Não foi possível criar Ajax')
+               return false
+            }
+
+            XHR.onreadystatechange=alertContents
+            XHR.open('GET',url,true)
+            XHR.send(null)
+         }
+
+         function alertContents(){
+            if (XHR.readyState==4 && XHR.status==200)mostraHistorico()
+         }
+
+         // Monta a lista dos últimos posts
+         function mostraHistorico(){
+            var xmlDoc=XHR.responseXML
+            var item=xmlDoc.getElementsByTagName("item")
+            for(i=0;i<item.length;i++){
+               var link=item[i].getElementsByTagName("link")[0].firstChild.nodeValue
+               var titulo=item[i].getElementsByTagName("title")[0].firstChild.nodeValue.replace(/\s\-\sAutor\(.*\)$/,"")
+               if(titulo=="")titulo="Sem título"
+
+               var data=item[i].getElementsByTagName("pubDate")[0].firstChild.nodeValue
+               var er=/([a-z]{3}), ([0-9]{2}) ([a-z]{3}) ([0-9]{4}) ([0-9]{2}\:[0-9]{2}\:[0-9]{2}) -[0-9]{4}/i
+               data=data.match(er)
+               var mes
+               switch(data[3]){
+                  case'Jan':mes='01';break
+                  case'Feb':mes='02';break
+                  case'Mar':mes='03';break
+                  case'Apr':mes='04';break
+                  case'May':mes='05';break
+                  case'Jun':mes='06';break
+                  case'Jul':mes='07';break
+                  case'Aug':mes='08';break
+                  case'Sep':mes='09';break
+                  case'Oct':mes='10';break
+                  case'Nov':mes='11';break
+                  case'Dec':mes='12';break
+               }
+               
+      
+      
+            }
+         }
+
+
+      function move(box,tit,show){
+         var li = document.getElementById(box);
+
+         var base = document.getElementById('position'+box);
+
+         lnk0 = li.getElementsByTagName('a')[0];
+         url2 = escape(''+box+'');     
+         lnk0.setAttribute('href','http://del.icio.us/post?v=4;url='+url2+'&title='+tit+'');
+
+         lnk1 = li.getElementsByTagName('a')[1];
+         lnk1.setAttribute('href','http://digg.com/submit?phase=2&url='+url2+'&title='+tit+'');       
+
+         lnk2 = li.getElementsByTagName('a')[2];
+         lnk2.setAttribute('href','http://google.com/bookmarks/mark?op=edit&bkmk='+url2+'&title='+tit+'');
+         
+         lnk4 = li.getElementsByTagName('a')[3];
+         lnk4.setAttribute('href','http://stumbleupon.com/submit?url='+url2+'&title='+tit+'');        
+
+         lnk5 = li.getElementsByTagName('a')[4];
+         lnk5.setAttribute('href','http://technorati.com/faves?add='+url2+'');            
+         
+         if (navigator.appName == 'Microsoft Internet Explorer'){
+            numLeft = parseInt(base.offsetLeft) - 90 + 'px';
+            numTop = parseInt(base.offsetTop) + 30 + 'px';
+         }else{ 
+            numLeft = parseInt(base.offsetLeft) + 29 + 'px';
+            numTop = parseInt(base.offsetTop) + 10 + 'px';
+         }  
+         li.style.top = numTop;
+         li.style.left = numLeft;
+         
+         showDiv(box,show);
+         
+      }
+
+      function showDiv(url,app){
+         var li = document.getElementById(url);
+         li.style.display = app; 
+      }
+
+
+      function menu_r(elem) {
+         if(elem.id === "bt_fechar") {
+            document.body.className = document.body.className.replace(/ ?menuOpen/g,'');
+         } else {
+            document.body.className += ' menuOpen';
+         }
+         return false;
+      };
+
+
+         //]]>
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20179088-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+   </head>
+   <body id="bBlog" class="" style="margin-top:15px">
+      <div class="centraliza">
+         <!--barras-->
+         <div id="main">
+         	<script>writeUolBar();</script>
+            <div id="header">
+               <h1><a href="/" title="Blog Jogosdaqui">Jogosdaqui</a></h1>
+            </div>
+            <div id="content">
+               <div id="coluna-esquerda">
+                  <div class="box" style="padding:0;height:79px;width:156px;border: 0;padding:1px;">
+						<a href="http://twitter.com/jogosdaqui/" target="_blank">
+							<img src="http://blog.i.uol.com.br/jogosdaqui/twitter.gif" style="margin-top:2px;margin-left:2px;"/>
+						</a>
+				  </div>
+				  
+				  <div class="box" style="padding:0;height:79px;width:156px;border: 0;padding:1px;">
+						<a href="mailto:jogosdaqui@uol.com.br?subject=jogosdaqui" target="_blank">
+							<img src="http://blog.i.uol.com.br/jogosdaqui/selo-email.jpg" style="margin-top:2px;margin-left:2px;"/>
+						</a>
+				  </div>
+				  <div class="box" style="padding:0;height:79px;width:156px;border: 0;padding:1px;">
+						<a href="http://skahal.com/pt/ships-n-battles/" target="_blank">
+							<img src="http://jogosdaqui.sites.uol.com.br/blog/Imagens/banner3.png" style="margin-top:2px;margin-left:2px;"/>
+						</a>
+				  </div>
+                  <div class="ferramentas box">
+                     <ul>
+                        <li class="rss"><a href="http://jogosdaqui.rssblog.uol.com.br/">RSS</a></li>
+                        <li class="indique"><a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892" onclick="popup(event, 'popup', 0)">Indique este blog</a></li>
+                        <li class="celular"><a href="http://celular.uol.com.br/wapsite/interacao.jhtm">Leia no celular</a></li>
+                        <li class="selo"><a href="http://blog.uol.com.br" target="_blank"><img src="http://es.i.uol.com.br/blogs/lancelloti/uol-blog.jpg"></a></li>
+                     </ul>
+                  </div>
+<!--Anúncio UOL -->
+<script type='text/javascript'>
+<!--
+uolxmlshopping='73|0|160|600|110563|60485'; uolxmlshoppingid='A1398527254'; uolxmlshoppingbusca='video game,games,consoles';
+-->
+</script>
+<script type='text/javascript' src='http://adrequisitor-af.shopping.uol.com.br/xmluol.js' id='A1398527254'></script>
+<!--Anúncio UOL -->
+               </div><!--//coluna-esquerda-->
+               
+               <div id="conteudo-central">
+                  
+                  
+                     
+                        <div class="postagem">
+                           <a name="2014_04-30_20_43_28-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('30/04/2014'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              SOS Mata Atlântica - O Jogo
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/SOSMataAtlantica_logo.png" alt="" /></div><p>Restam apenas 8,5% da Mata Atl&acirc;ntica original e essa floresta, que &eacute; a mais amea&ccedil;ada do Brasil, continua a ser desmatada.&nbsp;</p><p>&nbsp;</p><p>Pensando nisso, a Funda&ccedil;&atilde;o SOS Mata Atl&acirc;ntica encontrou uma forma divertida e interativa para conscientizar as pessoas e permitir que todos possam fazer a sua parte.&nbsp;</p><p>&nbsp;</p><p>Em parceria com a brasileira <a href="http://www.ovnistudios.com/" target="_blank">OvniStudios</a>, desenvolveu um jogo para abordar todas as quest&otilde;es pol&iacute;ticas e culturais dos projetos e atividades que fazem parte da causa da ONG.</p><p>&nbsp;</p><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/SOS_screen_shots_ipad0001.png" alt="" /></div><p>&nbsp;</p><p>A tarefa do jogador &eacute; muito simples, basta se voluntariar e realizar diversas atividades em uma das &aacute;reas amea&ccedil;adas da Mata Atl&acirc;ntica.</p><p>&nbsp;</p><p>As atividades variam entre reflorestamento, ca&ccedil;a predat&oacute;ria, coleta seletiva do lixo, controle da qualidade do ar, &aacute;gua e do solo, al&eacute;m do desenvolvimento sustent&aacute;vel por meio da agropecu&aacute;ria.&nbsp;</p><p>&nbsp;</p><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/SOS_screen_shots_ipad0002.png" alt="" /></div><p>&nbsp;</p><p>&Agrave; medida que o jogador avan&ccedil;a no jogo, ele adquire consci&ecirc;ncia ambiental.</p><p>&nbsp;</p><p>Quanto maior a consci&ecirc;ncia ambiental, maior &eacute; variedade liberada de &aacute;rvores caracter&iacute;sticas da Mata Atl&acirc;ntica e itens de decora&ccedil;&atilde;o para customizar a sua sede.</p><p>&nbsp;</p><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/SOS_screen_shots_ipad0003.png" alt="" /></div><p>&nbsp;</p><p>Um dos principais diferenciais do jogo &eacute; ser h&iacute;brido e multiplataforma, dispon&iacute;vel para <a href="https://itunes.apple.com/app/id642520824" target="_blank">iPhone, iPad, iPod-Touch</a>, <a href="https://play.google.com/store/apps/details?id=com.ovnistudios.sosgame" target="_blank">Android </a>e tamb&eacute;m <a href="http://apps.facebook.com/sosmataatlantica" target="_blank">Facebook</a>, com diversas atividades sociais como ranking global e apenas entre amigos, possibilidade de convidar e desafiar amigos para miss&otilde;es, postar atividades no mural, entre outras.</p><p>&nbsp;</p><p>Diferentemente de outros jogos do g&ecirc;nero, SOS Mata Atl&acirc;ntica - O Jogo &eacute; totalmente em 3D, com gr&aacute;ficos incr&iacute;veis e extremamente leves, rodando com bom desempenho em praticamente todos os smartphones, tablets e computadores presentes no mercado.&nbsp;</p><p>&nbsp;</p><p>Novos conte&uacute;dos e miss&otilde;es ser&atilde;o liberados gradualmente ap&oacute;s o &nbsp;lan&ccedil;amento do jogo. Brindes e recompensas tamb&eacute;m ser&atilde;o distribu&iacute;dos a pessoas que comparecerem a eventos e atividades realizados pela ONG.</p><p>&nbsp;</p><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/SOS_screen_shots_ipad0005.png" alt="" /></div><p>&nbsp;</p><p>Chegou a sua vez! Seja volunt&aacute;rio, manifeste-se, fa&ccedil;a a sua parte em prol da Mata Atl&acirc;ntica!</p><p>&nbsp;</p><div style="text-align: left;"><span style="font-size: x-small;"><em>(press-release)</em></span></div></div>
+         
+                           <p class="autor">Por: Diego Giacomelli (@g1acomell1) (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2014_04-30_20_43_28-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=SOS Mata Atlântica - O Jogo&du=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=SOS Mata Atlântica - O Jogo&c=&u=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0&title=SOS Mata Atlântica - O Jogo" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2014_04-30_20_43_28-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2014_04-30_20_43_28-154784552-0"><script>commentText(4)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-30_20_43_28-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2014_04-28_16_48_49-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('28/04/2014'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              DASH GAMES
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/EventoDASHGAMES.gif" alt="" /></div><p>&nbsp;</p><p>A Associa&ccedil;&atilde;o de Desenvolvedores de Jogos Digitais do Rio Grande do Sul - <strong>ADJOGOSRS</strong> apresenta, em coopera&ccedil;&atilde;o com a <strong>BITS 2014</strong>, o <strong>DASH GAMES</strong>, evento que ser&aacute; realizado de 13 a 15 de maio de 2014, durante a feira de Tecnologia da Informa&ccedil;&atilde;o e da Comunica&ccedil;&atilde;o, no Centro de Eventos <strong>FIERGS</strong>, em Porto Alegre (RS). Ser&aacute; o primeiro evento internacional &ndash; com convidados dos Estados Unidos, Finl&acirc;ndia, Chile e Argentina - voltado exclusivamente para a ind&uacute;stria de jogos Latino-Americana, e prop&otilde;e o compartilhamento de informa&ccedil;&otilde;es sobre produ&ccedil;&atilde;o e mercado, para ampliar o conhecimento t&eacute;cnico entre estudantes, profissionais e desenvolvedoras.</p><p>&nbsp;</p><p>Para Carlos Idiart, Presidente da ADJOGOSRS, o DASH GAMES criar&aacute; novas oportunidades de neg&oacute;cios, incentivando o crescimento da ind&uacute;stria no RS. &ldquo;Esse evento ser&aacute; um marco para o mercado do RS, pois a partir dele estaremos no mapa mundial de desenvolvedores de games. J&aacute; estamos sendo reconhecidos por varias empresas e investidores internacionais como poss&iacute;veis parceiros e o DASH fortalecer&aacute; muito nosso ecossistema de produ&ccedil;&atilde;o&rdquo;, afirma.</p><p>&nbsp;</p><p><strong><em>Mike Foster, Gerente da Sony, estar&aacute; no evento para falar sobre o programa de incuba&ccedil;&atilde;o para desenvolvedores de games</em></strong></p><p>Desenvolvedores de games de todo o Brasil est&atilde;o ajudando a criar novos jogos para o Playstation por meio do Programa de Desenvolvimento de Incuba&ccedil;&atilde;o, da Sony Computer Entertainment. &nbsp;&ldquo;Devido ao tamanho do pa&iacute;s &eacute; onde temos mais sucesso em encontrar desenvolvedores interessados no programa. Atualmente, temos 35 colaboradores no Brasil e v&aacute;rios com os quais estou falando. Eles v&ecirc;m de todas as regi&otilde;es do pa&iacute;s, incluindo Manaus, S&atilde;o Paulo, Rio e Porto Alegre, para citar alguns&rdquo;, afirma Mike Foster, Gerente de Contas para Am&eacute;rica Latina da Sony Computer Entertainment America.&nbsp;</p><p>&nbsp;</p><p>Mike &eacute; um dos palestrantes do DASH GAMES, evento da Associa&ccedil;&atilde;o de Desenvolvedores de Jogos Digitais do Rio Grande do Sul - ADJOGOSRS, em coopera&ccedil;&atilde;o com a BITS 2014, que ser&aacute; realizado de 13 a 15 de maio, durante a feira de Tecnologia da Informa&ccedil;&atilde;o e da Comunica&ccedil;&atilde;o, no Centro de Eventos FIERGS, em Porto Alegre. Ele vir&aacute; apresentar detalhes do programa e formas de participa&ccedil;&atilde;o, no dia 15 de maio, &agrave;s 18h10.</p><p>&nbsp;</p><p>O representante da Sony conta que muitos dos desenvolvedores cresceram jogando PlayStation e agora tem a oportunidade de ajudar na cria&ccedil;&atilde;o dos games. Dois jogos produzidos no Brasil j&aacute; foram lan&ccedil;ados no mercado "Freekscape : Escape from Hell", um jogo de PSP Mini desenvolvedor Kidguru e o "Streetkix : Freestyle", um jogo de PSP de desenvolvedor Ilusis, e novos jogos devem ser lan&ccedil;ados esse ano. Mike destaca ainda algumas qualidades dos desenvolvedores brasileiros &ldquo;Sua paix&atilde;o e criatividade v&atilde;o ajudar a colocar o Brasil no mapa do mundo como uma comunidade forte de desenvolvimento de games&rdquo;, afirma.</p><p>&nbsp;</p><p>&nbsp;</p><p><strong><em>Palestras</em></strong></p><p><strong>13 de maio</strong></p><p>14h20 - Martina Santoro - S&oacute;cio-fundadora da OKAM Studio - Argentina</p><p>15h20 - Victor Hugo Queiroz - Modelador 3D - Brasil</p><p>15h55 - Edh Muller &ndash; Pr&eacute; Lan&ccedil;amento Tormenta &ndash; Brasil</p><p>17h10 - Marco Galv&atilde;o - Programador Joy Masher &ndash; Brasil</p><p>18h10 - Peter Vesterbacka - Vice-Presidente e Diretor de Marketing da Rovio Mobile. Criador do Angry Birds &ndash; Finl&acirc;ndia</p><p>&nbsp;</p><p><strong>14 de maio</strong></p><p>14h20 - Agust&iacute;n Cordes - Fundador do Senscape &ndash; Argentina</p><p>15h20 - Tiago Hoisel &ndash; Ilustrador &ndash; Brasil</p><p>17h10 - Mario Wynands &ndash; Diretor PIK POK &ndash; Nova Zel&acirc;ndia</p><p>18h10 - Steven Escalante - Fundador e &nbsp;Gerente Geral da Versus Evil &ndash; Estados Unidos</p><p>&nbsp;</p><p><strong>15 de maio</strong></p><p>14h20 - Sebastian &Aacute;lvaro Gonzalez - Produtor &ndash; ACE Equipe Software &ndash; Chile</p><p>15h20 - Christopher Kastensmidt - Game Designer Ubisoft &ndash; Estados Unidos</p><p>16h10 - Palestra de Luiz Ojima Sakuda &ndash; Pesquisa da ind&uacute;stria de games no Brasil</p><p>17h10 &ndash; Team1CDD &ndash; Distor&ccedil;&otilde;es: Um game brasileiro em 3D &ndash; Brasil</p><p>18h10 - Mike Foster - Gerente de Contas Am&eacute;rica Latina da Sony Computer Entertainment &nbsp;America LLC &ndash; Estados Unidos</p><p>&nbsp;</p><p><strong><em>As inscri&ccedil;&otilde;es para o evento custam R$ 100,00 para empresas associadas &agrave; ADJOGOSRS e R$ 150,00 para o p&uacute;blico em geral.</em></strong></p><p><strong><em>Inscri&ccedil;&otilde;es: <a href="http://www.bitsouthamerica.com.br/eventos.php" target="_self">www.bitsouthamerica.com.br/eventos.php</a></em></strong></p><p>&nbsp;</p><div style="text-align: left;"><span style="font-size: x-small;"><em>(press-release)</em></span></div></div>
+         
+                           <p class="autor">Por: Diego Giacomelli (@g1acomell1) (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2014_04-28_16_48_49-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=DASH GAMES&du=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=DASH GAMES&c=&u=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0&title=DASH GAMES" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2014_04-28_16_48_49-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2014_04-28_16_48_49-154784552-0"><script>commentText(4)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-28_16_48_49-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2014_04-25_12_11_19-154784552-0"></a>
+                           
+                              <script>
+                              function dtMes(param){
+                                 dt = param.split("/")
+                                 res = dt[0]+" de "+defineMes(dt[1])+" de "+dt[2];
+                                 return res;
+                              }
+                              </script>
+                              <div class="data"><h2><script>document.write(dtMes('25/04/2014'))</script></h2></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              Nhom
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><div style="text-align: left;"><span style="font-size: x-small;"><em>Por Nat&aacute;lia Couto em colabora&ccedil;&atilde;o para o jogosdaqui.</em></span></div><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/Nhom_000.png" alt="" /><br /></div><p>&nbsp;</p><p>Nhom, da brasileira Sliding Lemon Story, &eacute; um jogo casual para a plataforma Android.</p><p>O jogo possui personagens fofinhos e engra&ccedil;ados, mas com um senso de humor um pouco diferente.</p><p>&nbsp;</p><p>Nhom &eacute; um extraterrestre que est&aacute; passeando pelo universo com seus pais, quando de repente, seus pais sofrem um ataque e Nhom acaba perdido em um planeta desconhecido.</p><p>Sozinho, o protagonista acaba encontrando alguns habitantes desse planeta, mas esses habitantes s&atilde;o diferentes, s&atilde;o feitos de comida!&nbsp;</p><p>Para que Nhom possa crescer e encontrar seus pais, ele deve se alimentar dos habitantes deste planeta desconhecido.</p><p>&nbsp;</p><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/Nhom_02.png" alt="" /></div><p>&nbsp;</p><p>No jogo, voc&ecirc; deve ajudar Nhom a se alimentar, verificando na placa dos habitantes qual deles ele est&aacute; com vontade de comer, e ent&atilde;o tocar em cima do habitante. Mas tome cuidado, quando os habitantes come&ccedil;am a brilhar, diferentes coisas podem acontecer: os habitantes podem trocar de lugar, se transformar em power ups ou itens que podem atrapalhar!</p><p>&nbsp;</p><div style="text-align: center;"><img src="http://jogosdaqui.blog.uol.com.br/images/Nhom_01.png" alt="" /></div><p>&nbsp;</p><p>Quanto mais habitantes voc&ecirc; tocar sem errar, maior combo e pontos receber&aacute;!</p><p>&nbsp;</p><p>Existem 4 Est&aacute;gios diferentes e em cada um deles Nhom estar&aacute; em um estado mais evolu&iacute;do, assim como os habitantes do planeta.</p><p>&nbsp;</p><p>Pode ser jogado em modo hist&oacute;ria ou em arcade, possuindo um ranking para motivar a disputa entre voc&ecirc; e seus amigos!</p><p>&nbsp;</p><div style="text-align: center;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="560" height="315" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/njgNjM8oqEc?version=3&amp;hl=pt_BR" /><embed type="application/x-shockwave-flash" width="560" height="315" src="http://www.youtube.com/v/njgNjM8oqEc?version=3&amp;hl=pt_BR" allowscriptaccess="always" allowfullscreen="true"></embed></object></div><p>&nbsp;</p><p>O jogo foi submetido ao concurso de games no Computer on The Beach de 2014, e recebeu o 3&ordm; lugar!</p><p>Gostou? Ent&atilde;o baixe Nhom diretamente do&nbsp;<a href="https://play.google.com/store/apps/details?id=com.SlidingLemonStory.NhomFreeHD" target="_blank">Google Play</a>.</p></div>
+         
+                           <p class="autor">Por: Diego Giacomelli (@g1acomell1) (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2014_04-25_12_11_19-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=Nhom&du=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=Nhom&c=&u=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0&title=Nhom" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2014_04-25_12_11_19-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2014_04-25_12_11_19-154784552-0"><script>commentText(4)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_12_11_19-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                        <div class="postagem">
+                           <a name="2014_04-25_09_19_38-154784552-0"></a>
+                           
+                              <div class="borda-postagem"></div>
+                           
+                        
+                           <h3>
+                              
+                                 
+                              
+                              O perfil dos jogadores
+                           </h3>
+                           
+<!--Anúncio UOL-->    
+<div style='text-align:center'>    
+<br>      
+<script type="text/javascript">
+<!--
+descrColor="000000";titleColor="000000";urlColor="A6A6A6";borderColor="FFFFFF";bgColor="FFFFFF";altColor="FFFFFF";coddisplaysupplier="c771c1399b5843d2a70bfbac334e7595";formatId="2";numads="2";deslabel="jogosdaqui";type="1";
+-->
+</script>
+<script type="text/javascript" src="http://adrequisitor-af.lp.uol.com.br/uolaf.js"></script>
+<br>
+</div>
+<!--Anúncio UOL-->   
+                           
+                           <div class="post-text"><p class="MsoNormal">O jogo &eacute; uma atividade comum em todas as sociedades e culturas, e assim tem permanecido desde tempos imemoriais. Para a maioria das pessoas, esta atividade n&atilde;o passa de um divertimento, uma op&ccedil;&atilde;o de lazer, sem consequ&ecirc;ncias negativas de qualquer tipo.</p><p class="MsoNormal">&nbsp;</p><p class="MsoNormal">Diferentes estudos apontam para que entre 70% a 90% da popula&ccedil;&atilde;o adolescente e adulta da Am&eacute;rica do Sul j&aacute; tenha jogado em alguma ocasi&atilde;o.</p><p class="MsoNormal">&nbsp;</p><p class="MsoNormal">Observa-se em quase todos os estudos que as expectativas de divers&atilde;o s&atilde;o as mais comuns entre os jogadores respons&aacute;veis que preferem sobretudo os jogos sociais e n&atilde;o tanto os jogos de apostas.</p><p class="MsoNormal">&nbsp;</p><p class="MsoNormal">Logicamente que, entre jogos de risco e os outros tipos de jogos que h&aacute; muitas diferen&ccedil;as. Especialmente no que consideramos ao grafismo, o que a n&iacute;vel mundial (e os jogos produzidos no Brasil n&atilde;o s&atilde;o exce&ccedil;&atilde;o) temos assistido a uma evolu&ccedil;&atilde;o brutal mas tamb&eacute;m em dificuldades de jogos, complexidade dos mesmos e inova&ccedil;&otilde;es e funcionalidades introduzidas. Tudo com o objetivo de tornar a experi&ecirc;ncia de jogar mais real, cred&iacute;vel e tamb&eacute;m mais capaz de entreter corretamente.</p><p class="MsoNormal">&nbsp;</p><p class="MsoNormal">Para se conhecer os perfis dos apostadores/jogadores ter&aacute; que se atender a crit&eacute;rios como a idade, o g&eacute;nero, o tipo de atividade, os dias da semana de mais atividade, o n&uacute;mero de horas que s&atilde;o utilizadas para apostar/jogar, os riscos por tipo de atividade (jogos de equipe, RPGs, FPPs, m&aacute;quinas, poker, casino, loterias, apostas desportivas, etc.), bem como a rela&ccedil;&atilde;o entre jogo social, jogo a dinheiro e divers&atilde;o, e os efeitos em rela&ccedil;&atilde;o aos adolescentes e jovens, entre outros.</p><p class="MsoNormal">&nbsp;</p><p class="MsoNormal">Se tivermos em conta os jogos nas principais plataformas, sabemos que, se encontram numa faixa et&aacute;ria, majoritariamente, entre os 15 e 30 anos de idade e que atentam sobretudo ao grafismo, jogabilidade, desafios e grandes novidades.</p><p class="MsoNormal">&nbsp;</p><p class="MsoNormal">No entanto, se considerarmos jogos de apostas online o perfil muda significativamente, uma vez que, a idade se situa entre os 25 e os 40 (majoritariamente) e o que estes jogadores procuram &eacute; seguran&ccedil;a, possibilidade de ganhar dinheiro e maior retorno do mesmo. Por exemplo, em sites como&nbsp;<a style="color: #1155cc; font-family: arial, sans-serif; font-size: 13px;" href="http://www.slotsonline.pt" target="_blank">http://www.slotsonline.pt</a><span style="color: #222222; font-family: arial, sans-serif; font-size: 13px;">.</span>&nbsp;sabe-se que a procura &eacute; feita pela sua seguran&ccedil;a nas transa&ccedil;&otilde;es, mas sobretudo pela possibilidade de ganhar dinheiro com a facilidade de ser a partir de qualquer lado.</p><p class="MsoNormal">&nbsp;</p><p class="MsoNormal">Ainda assim, no geral sabe-se que os jogos mais procurados e jogados no Brasil s&atilde;o os jogos em massa online ou MMORPG e os FPS, seguidos de perto pelos jogos de apostas e apenas posteriormente os jogos que s&atilde;o os grandes &ecirc;xitos das principais plataformas.</p><p>&nbsp;</p><p class="MsoNormal">Resumindo, o que n&atilde;o falta s&atilde;o entretenimentos para todo o tipo de jogadores de acordo com as suas preferencias e com as evolu&ccedil;&otilde;es tecnol&oacute;gicas isto promete evoluir muito mais e surpreender a cada dia. E apesar de podermos classificar v&aacute;rios tipos de jogadores, bem como, v&aacute;rios est&aacute;gios de jogo sabemos que esta &eacute;, tamb&eacute;m uma ind&uacute;stria que gera milh&otilde;es todos os anos e estudos indicam que vai continuar a desenvolver-se e gerar mais lucros.</p></div>
+         
+                           <p class="autor">Por: Diego Giacomelli (@g1acomell1) (<a href="http://twitter.com/g1acomell1">@g1acomell1</a>)</p>
+                     
+                              <div class="ferramentas-comentarios">
+               
+                  <ul id="barra">
+                     <li>
+                     <ul id="compartilhe">
+                        <li class="lblP"><span class="lbl">Compartilhe</span></li>
+                         <li>
+                        
+   <a href="http://navblog.uol.com.br/recommend.html?idBlog=3418892&postFileName=2014_04-25_09_19_38-154784552-0" onclick="popup(event, 'popup', 0)" title="Envie esta mensagem"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_carta.gif" /></a>
+                        
+                         </li>
+                         
+                        <li>
+                         <a href="http://promote.orkut.com/preview?nt=orkut.com&tt=O perfil dos jogadores&du=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0" target="_blank"><!-- &tn=http://img.uol.com.br/image_src/economia.gif //--><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_orkut.gif" title="Orkut" alt="Orkut"/></a>
+                         </li>
+                         <li><a href="http://www.facebook.com/sharer.php?u=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0" target="_blank"><img src="http://n.i.uol.com.br/blogs/sylvio-renan/ico_face.gif" title="Facebook" alt="Facebook"/></a>
+                         </li>
+                         <li class="twitter" id="twit"><a href="http://twitter.com/?status=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0" target='_blank'><img src='http://n.i.uol.com.br/blogs/sylvio-renan/ico_twitter.gif' title='Twitter' alt='Twitter'/></a></li>
+                         
+                         <!--<li><a href="http://del.icio.us/post?url=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_delicious.gif" title="Del.icio.us" alt="Del.icio.us"/>Del.icio.us</a></li>
+                         <li><a href="http://www.netvibes.com/subscribe.php?url=http://mobilidadesustentavel.rssblog.uol.com.br/" target="_blank"><img src="http://img.uol.com.br/ico_netvibes.gif" title="Netvibes" alt="Netvibes"/>Netvibes</a></li>
+                         <li><a href="http://technorati.com/faves?ali=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_technorati.gif" title="Technorati" alt="Technorati"/>Technorati</a></li>
+                         <li><a href="http://www.myspace.com/index.cfm?fuseaction=postto&t=O perfil dos jogadores&c=&u=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_myspace.gif" title="Myspace" alt="Myspace"/>Myspace</a></li>
+                         <li><a href="http://digg.com/submit?phase=2&url=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0" target="_blank"><img src="http://img.uol.com.br/ico_digg.gif" title="Digg" alt="Digg"/>Digg</a></li>
+                         <li><a href="http://www.google.com/bookmarks/mark?op=edit&output=popup&bkmk=http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0&title=O perfil dos jogadores" target="_blank"><img src="http://img.uol.com.br/ico_google.gif" title="Bookmarks" alt="Bookmarks"/>Bookmarks</a></li> //-->
+                     </ul>
+                      </li>
+                      <li>
+                     <div class="item comente">
+                         <div>
+                        
+                            <a href="http://navblog.uol.com.br/comment.html?postFileName=2014_04-25_09_19_38-154784552-0&idBlog=3418892" onclick="popup(event, 'popup', 0)" class="descricao"><span id="post2014_04-25_09_19_38-154784552-0"><script>commentText(4)</script></span></a>
+                        
+                         </div>
+                     </div>
+                      </li>
+                      <li class="ult">
+                     <ul id="link">
+                         <li><span class="lbl">Link</span> <input type="text" id="url" value="http://jogosdaqui.blog.uol.com.br/arch2014-04-01_2014-04-30.html#2014_04-25_09_19_38-154784552-0" /></li>
+                     </ul>
+                      </li>
+                  </ul>
+                              
+   
+                              </div>
+                        </div>
+                     
+                  
+                  
+               </div><!--//conteudo-central-->
+               
+               <div id="coluna-direita">
+					<a style="display:block;margin:0 0 15px;" href="http://jogos.uol.com.br/" title="Ir para UOL - Jogos" target="_blank">
+                     <img width="157" src="http://blog.i.uol.com.br/jogosdaqui/selo-uol-jogos.jpg" alt="Ir para UOL - Jogos" />
+                  </a>
+				
+                  <div class="box">
+                     <h2>Sobre o blog</h2>
+                     <p>
+                     O jogosdaqui tem como missão proporcionar aos jogadores brasileiros um contato direto com os jogos produzidos por empresas nacionais. Nasceu da necessidade de um canal de comunicação entre os jogadores brasileiros e as empresas brasileiras de desenvolvimento de jogos. Nesse blog pretendemos trazer ao público um meio comum para notícias, análises, previews e making ofs  sobre os jogos produzidos aqui, por isso os games brasileiros serão sempre o destaque no jogosdaqui.
+                     </p>
+                  </div>
+                  
+                  <div class="historico box">
+                     <h2>Histórico</h2>
+                     
+                     
+                     <ul id="periodos-lateral"><script type="text/javascript">montaPeriodos();</script></ul>
+                     <div id="vejaMais"><a id="m" href="/listArchive.html">+ veja mais</a></div>
+                     
+                  </div>              
+
+               </div><!--//coluna-direita-->
+                                       
+               <div id="footer">
+                  <div class="dente"><!--//--></div>
+                  <p class="topo"><a href="#">Ir para o topo</a></p>
+               </div>
+               
+            </div><!--//content-->
+         </div>
+         <script type="text/javascript">writeUOLBar();</script>
+         <script>
+            // CORRIGE TWITTER
+            li = document.getElementsByTagName("li");
+   
+            for (i=0; i<li.length;i++){
+               if (li[i].className.indexOf("twitter")!=-1) {
+                  li[i].innerHTML = li[i].innerHTML.replace("#","%23");
+               }
+            }
+         
+         
+            // Variaveis de configuracao
+         
+            // Fim da configuracao 
+
+
+            /* NAO ALTERAR DAQUI PARA BAIXO, apenas remova os comentarios se precisar.
+            A linha abaixo deve obrigatoriamente ficar fora da função o valor de 
+            "DErand" nao pode ser diferente para os banners de uma mesma pagina */
+            d=document; var DEt=new Date(); DEt=DEt.getTime(); DErand=Math.floor(DEt*1000*Math.random());
+
+            // Verifica resolucao de tela
+            var scw=0,sch=0; if(screen.height){scw=screen.width;sch=screen.height;}
+
+            // Funcao que exibe o banner
+            function DEshow(ad,pos){
+            // Verifica tipo de conexao do usuario
+            var DEconn=d.body; DEconn.style.behavior='url(#default#clientCaps)'; DEconn=(DEconn.connectionType=='lan')?1:0;
+            d.write('<scr'+'ipt language="JavaScript1.1" src="http://bn.uol.com.br/js.ng/site=par&chan='+DEchan+'&subchan='+DEsubc+'&affiliate='+DEaff+'&size='+ad+'&page='+pos+'&conntype='+DEconn+'&expble='+Expble+'&reso='+scw+'x'+sch+'&cmpng='+DEcmpng+'&group='+DEGroup+'&tile='+DErand+'?"></scr'+'ipt>');
+            }
+            
+         </script>
+         
+         
+      </div>
+         
+      </div><!--//centraliza-->  
+      <script src="arch2014-04-01_2014-04-30.js"></script>
+
+<div id="uol-host">&copy; 1996-2010 UOL - O melhor conteúdo. Todos os direitos reservados.<br><a target="_blank" href="http://www.uolhost.com.br/hospedagem-de-sites.html">Hospedagem</a>: <a target="_blank" href="http://www.uolhost.com.br/">UOL Host</a></div>
+
+<!-- SiteCatalyst code version: H.19.3. Copyright 1997-2009 Omniture, Inc. More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="http://me.jsuol.com/omtr/jogos.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+var omni_blogtitle="jogosdaqui".toLowerCase();
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+uol_sc.channel="Jogos";
+uol_sc.hier1="Jogos:blogs:"+omni_blogtitle;
+uol_sc.prop1="Jogos-blogs";
+uol_sc.prop2="Jogos-blogs-"+omni_blogtitle;
+uol_sc.prop3="Jogos-blogs-"+omni_blogtitle;
+var s_code=uol_sc.t();if(s_code)document.write(s_code)//--></script>
+<!-- End SiteCatalyst code version: H.19.3. -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

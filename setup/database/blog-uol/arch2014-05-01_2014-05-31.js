@@ -1,0 +1,9 @@
+document.getElementById("post2014_05-26_22_03_51-154784552-0").innerHTML=commentText("0"  );
+document.getElementById("post2014_05-22_07_52_41-154784552-0").innerHTML=commentText("0"  );
+document.getElementById("post2014_05-15_08_19_41-154784552-0").innerHTML=commentText("0"  );
+document.getElementById("post2014_05-13_14_23_42-154784552-0").innerHTML=commentText("0"  );
+document.getElementById("post2014_05-12_14_28_10-154784552-0").innerHTML=commentText("0"  );
+document.getElementById("post2014_05-08_08_44_17-154784552-0").innerHTML=commentText("0"  );
+document.getElementById("post2014_05-05_08_45_31-154784552-0").innerHTML=commentText("0"  );
+document.getElementById("post2014_05-04_16_21_02-154784552-0").innerHTML=commentText("0"  );
+document.getElementById("post2014_05-02_10_05_00-154784552-0").innerHTML=commentText("0"  );
